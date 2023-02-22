@@ -1,2 +1,1 @@
-# test2023
-hahahahaha lalalalala
+This repo is for sharing of notes.
