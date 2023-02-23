@@ -1,5 +1,3 @@
-<link type="text/css" rel="stylesheet" href="../stylesheets/misty-light-windows.css" />
-
 # Key Notes of DS4PH Class
 
 Note: Some of the notes here are derived from the class material, while others are personal notes taken during my own learning process.
