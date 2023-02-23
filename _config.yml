@@ -2,5 +2,4 @@
 title:            Hollis Note Sharing
 description:      Be Happy
 
-include:
-  - stylesheets/misty-light-windows.css
+remote_theme: HollisChen/jekyll-gitbook
