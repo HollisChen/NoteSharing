@@ -1,3 +1,6 @@
 # Configurations
 title:            Hollis Note Sharing
 description:      Be Happy
+
+include:
+  - stylesheets/misty-light-windows.css
