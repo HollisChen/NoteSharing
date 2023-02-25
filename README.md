@@ -12,6 +12,12 @@ The following are Note Links:
 
 [Hidden Neurons Modeling-Related Paper Reading](https://hollischen.github.io/NoteSharing/Shuqi_Project/HNM%20Paper%20Reading%20Notes)
 
+[Math & Physics & CS English](https://hollischen.github.io/NoteSharing/English%20Notes/Math%20&%20Physics%20&%20CS%20English)
+
+[Regular-Professional English](https://hollischen.github.io/NoteSharing/English%20Notes/Regular-Professional%20English)
+
+[Food English](https://hollischen.github.io/NoteSharing/English%20Notes/Food%20English)
+
 The following are Paper Links:
 
 [PhD Thesis Guangyu Robert Yang](https://hollischen.github.io/NoteSharing/Papers/PhD%20Thesis%20Guangyu%20Robert%20Yang.pdf)
