@@ -8,9 +8,9 @@ The following are Note Links:
 
 [G.R.Yang PhD Thesis Reading Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/G.R.Yang%20PhD%20Thesis%20Reading%20Notes)
 
-[Complex Networks for Asynchronous Representation Paper Reading Notes](https://hollischen.github.io/NoteSharing/ZhengHao_Project/CNAP%20Paper%20Reading%20Notes)
+[Complex Networks for Asynchronous Representation Paper Reading Notes](https://hollischen.github.io/NoteSharing/ZhengHao%20Project/CNAP%20Paper%20Reading%20Notes)
 
-[Hidden Neurons Modeling-Related Paper Reading](https://hollischen.github.io/NoteSharing/Shuqi_Project/HNM%20Paper%20Reading%20Notes)
+[Hidden Neurons Modeling-Related Paper Reading](https://hollischen.github.io/NoteSharing/Shuqi%20Project/HNM%20Paper%20Reading%20Notes)
 
 [Math & Physics & CS English](https://hollischen.github.io/NoteSharing/English%20Notes/Math%20&%20Physics%20&%20CS%20English)
 
