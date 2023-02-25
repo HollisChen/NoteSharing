@@ -1,4 +1,4 @@
-# Complex Networks for Asynchronous Representation
+# Complex Networks for Asynchronous Representation Paper Reading Notes
 
 ## Polychronization: Computation with Spikes
 
