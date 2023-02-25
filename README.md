@@ -2,7 +2,9 @@
 
 The following are Note Links:
 
-[Key Notes of DS4PH Class](https://hollischen.github.io/NoteSharing/DS4PH_Class_Notes/Key%20Notes%20of%20DS4PH%20Class)
+[Key Notes of DS4PH Class](https://hollischen.github.io/NoteSharing/DS4PH%20Class%20Notes/Key%20Notes%20of%20DS4PH%20Class)
+
+[Models of the Neuron Learning Notes](https://hollischen.github.io/NoteSharing/Models%20of%20the%20Neuron%20Class%20Notes/Models%20of%20the%20Neuron%20Learning%20Notes)
 
 [G.R.Yang PhD Thesis Reading Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/G.R.Yang%20PhD%20Thesis%20Reading%20Notes)
 
