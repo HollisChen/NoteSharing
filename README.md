@@ -6,6 +6,8 @@ The following are Note Links:
 
 [Models of the Neuron Learning Notes](https://hollischen.github.io/NoteSharing/Models%20of%20the%20Neuron%20Class%20Notes/Models%20of%20the%20Neuron%20Learning%20Notes)
 
+[Bayesian Statistics](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Bayesian%20Statistics)
+
 [G.R.Yang PhD Thesis Reading Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/G.R.Yang%20PhD%20Thesis%20Reading%20Notes)
 
 [Complex Networks for Asynchronous Representation Paper Reading Notes](https://hollischen.github.io/NoteSharing/ZhengHao%20Project/CNAP%20Paper%20Reading%20Notes)
