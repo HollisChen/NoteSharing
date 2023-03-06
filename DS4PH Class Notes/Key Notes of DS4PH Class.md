@@ -339,4 +339,205 @@ annual.loc[(annual.BUYER_STATE == "AR") & (annual.BUYER_COUNTY == "MONTGOMERY")]
 annual.loc[(annual.BUYER_STATE == "AR") & (annual.BUYER_COUNTY == "MONTGOMERY"), "countyfips"] = 5097 # In this example, we are selecting all rows where BUYER_STATE is equal to "AR" and BUYER_COUNTY is equal to "MONTGOMERY", and then setting the countyfips column of those rows to 5097.
 ```
 
+## Dash, Shiny, and Streamlit
+
+Dash, Shiny, and Streamlit are web frameworks used for building interactive and data-driven web applications.
+
+Dash is a Python framework for building web applications with Python and HTML/CSS. It is particularly well-suited for building data visualization and analytics applications using popular Python data science libraries such as Plotly, Dash Core Components, and Dash HTML Components. (Dash is developed by Poltly.)
+
+Shiny is a web application framework for building interactive web applications with R. It is developed by RStudio and is built on top of the popular R packages, including ggplot2, dplyr, and tidyr.
+
+Actually, Dash is a framework for developing dashboards and creating web based data apps in R, python or Julia. Dash is more popular among the python focused, while shiny, a related platform, is more popular among R focused, but also applies much more broadly than just for R apps. So, usually we compare Python Dash with R Shiny.
+
+Streamlit is an open-source Python framework for building data apps. It allows you to quickly create and share interactive data apps and dashboards using only Python code. It comes with a set of pre-built components for data visualization, user input, and output that allow you to create interactive apps in minutes.
+
+All three frameworks are designed to be user-friendly and accessible to developers without deep expertise in web development, making it easy to create and deploy data-driven web applications. Dash is the most full framework; Shiny makes some compromises to make it little easier; Streamlit then makes a lot of compromises to make it easier.
+
+##  "\_\_call\_\_" method
+
+In Python, the `__call__` method is used to make an instance of a class callable like a function. When an instance is called, the `__call__` method is automatically invoked. This method can be defined within a class to define what happens when the instance of the class is called.
+
+Here is an example:
+
+```python
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+    
+    def __call__(self, x):
+        return self.value + x
+    
+obj = MyClass(10)
+print(obj(5))   # Output: 15
+```
+
+In the above example, `MyClass` defines a `__call__` method which adds the input value `x` to the value of the instance variable `value`. When the instance `obj` is called with an input of `5`, it returns the sum of `obj.value` and `x`, which is `15`.
+
+## Decorators
+
+First, we give two examples, and the `wraps` decorator used in the examples will be explained latter.
+
+Example 1:
+
+```python
+from functools import wraps
+
+
+# Here, we define a func 'logit' outside the decorator func 'logging_decorator'.
+# The func 'logit' is used to pass parameters to the decorator func.
+def logit(logfile='out.log'):
+    def log_decorator(func): # decorator function (decorator)
+        @wraps(func)
+        def wrapper(*args, **kwargs): # wrapper function (wrapper)
+            log_string = func.__name__ + " was called"
+            print(log_string)
+            # open logfile for writing
+            with open(logfile, 'a') as opened_file:
+                # write log_string into logfile
+                opened_file.write(log_string + '\n')
+            return func(*args, **kwargs)
+        return wrapper
+    return log_decorator
+
+# here, the parentheses imply that 'logit' is not the decorator func, but a 
+# func outside the decorator func, or a insatnce of a class in next example. 
+@logit() 
+def myfunc1():
+    pass
  
+myfunc1()
+# Output: myfunc1 was called
+# a file named 'out.log' will be generated with lpg_string written in
+
+@logit(logfile='func2.log') # input a name for the log file
+def myfunc2():
+    pass
+ 
+myfunc2()
+# Output: myfunc2 was called
+# a file named 'func2.log' will be generated with log_string written in
+```
+
+Example 2:
+
+```python
+from functools import wraps
+
+
+# here we use class to do the same thing
+class logit(object):
+    def __init__(self, logfile='out.log'):
+        self.logfile = logfile
+ 
+    def __call__(self, func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            log_string = func.__name__ + " was called"
+            print(log_string)
+            # open logfile for writing
+            with open(self.logfile, 'a') as opened_file:
+                # write log_string into logfile
+                opened_file.write(log_string + '\n')
+            # send a notification
+            self.notify()
+            return func(*args, **kwargs)
+        return wrapper
+ 
+    def notify(self):
+        # just pass, not defined here
+        pass
+
+# here logit() is a instance of the class
+@logit()
+def myfunc1():
+    pass
+
+myfunc1()
+# Output: myfunc1 was called
+# a file named 'out.log' will be generated with log_string written in
+```
+
+The `wraps` decorator is a convenience decorator provided in the `functools` module in Python. It is used to update the attributes of the wrapper function to match the original function being decorated.
+
+When you decorate a function with another function, the original function's metadata (like its name, docstring, etc.) may get replaced by those of the decorator function. This can cause issues when debugging, testing or using some tools that rely on the original function's metadata. The `wraps` decorator helps to solve this issue by copying the original function's metadata to the wrapper function.
+
+Here's an example:
+
+```python
+from functools import wraps
+
+def decorator(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        """This is the wrapper function"""
+        return func(*args, **kwargs)
+    return wrapper
+
+@decorator
+def my_function():
+    """This is the original function"""
+    pass
+
+print(my_function.__name__) # Output: my_function
+print(my_function.__doc__) # Output: This is the original function
+```
+
+In the example above, the `wraps` decorator is used to copy the name and docstring of the original function `my_function` to the wrapper function `wrapper`. This ensures that the metadata of the original function is preserved.
+
+## Type hints
+
+We can use type hints to provide information about the expected types of function or method parameters, return values, and attributes. They are optional, but can be helpful for code clarity and for identifying errors during development.
+
+We can see examples before the explanation. The following are two examples, one without the package `typing` and one with the package `typing`.
+
+Example 1:
+
+```python
+def func_with_type_hint(
+        channels: int,
+        feature: int = 24,
+        rate: float = 0.0,
+        check: bool = False,
+        spatial_dims: int = 3,
+    ) -> None:
+    print("func_with_type_hint successfully runs")
+
+func_with_type_hint(1) 
+# Output: func_with_type_hint successfully runs
+```
+
+Example 2:
+
+```python
+from typing import Sequence, Tuple, Type, Union
+from sklearn.linear_model import LinearRegression
+
+def func_with_type_hint(
+        size: Union[Sequence[int], int],
+        channels: int,
+        heads: Sequence[int] = (3, 6, 12, 24),
+        feature: int = 24,
+        norm: Union[Tuple, str] = "instance",
+        rate: float = 0.0,
+        check: bool = False,
+        spatial_dims: int = 3,
+        encoding: Union[Tuple, str] = 'rand',
+        method_class: Type[LinearRegression] = LinearRegression, # LinearRegression is a class, so we use Type[LinearRegression] to indicate its class
+        method_instance: LinearRegression = LinearRegression(), # LinearRegression() is an instance of the class, so we directly use LinearRegression to indicate its class
+    ) -> None:
+    print("func_with_type_hint successfully runs")
+
+func_with_type_hint(1,2)
+# Output: func_with_type_hint successfully runs
+```
+
+In Python, the syntax used to define the type hints is based on PEP 484, which specifies a syntax for annotating variables, functions and arguments with their expected types.
+
+The syntax of type hints and default values is `variable_name: type_hint = default_value` where `variable_name` is the name of the variable, `type_hint` is the expected data type of the variable, and `default_value` is an optional value that can be assigned to the variable if no other value is provided.
+
+For example, `: int = 3` means that the variable is an integer type and its default value is 3. The `-> None` syntax is used to specify the return type of a function, where `None` means that the function does not return any value.
+
+Sometimes we need the package `typing`  if more types are needed. `typing` is a module in Python that provides support for type hints, which allow you to indicate the expected types of function arguments, return values, and variables. Type hints are not enforced at runtime, but they can help catch errors during development and make code more readable and self-documenting. The `typing` module provides various types, such as `List`, `Dict`, `Tuple`, `Union`, `Any`, etc., which can be used to specify the types of variables and function arguments.
+
+
+
