@@ -5,5 +5,13 @@ description:      Be Happy
 markdown: kramdown
 kramdown:
   math_engine: mathjax
+  
+ defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+
 
 # remote_theme: HollisChen/jekyll-gitbook
