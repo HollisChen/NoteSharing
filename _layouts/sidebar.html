@@ -1,0 +1,10 @@
+<nav id="toc" class="sidebar">
+  <p class="sidebar-title">Table of Contents</p>
+  <ul>
+    {% for item in site.toc %}
+    <li>
+      <a href="#{{ item.id }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
