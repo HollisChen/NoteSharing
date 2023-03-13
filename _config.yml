@@ -1,10 +1,10 @@
 # Configurations
-# title:            Hollis Note Sharing
-# description:      Be Happy
+title:            Hollis Note Sharing
+description:      Be Happy
 
-# markdown: kramdown
-# kramdown:
-#   math_engine: mathjax
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
   
 #  defaults:
 #   - scope:
