@@ -1,17 +1,17 @@
 # Configurations
-title:            Hollis Note Sharing
-description:      Be Happy
+# title:            Hollis Note Sharing
+# description:      Be Happy
 
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
+# markdown: kramdown
+# kramdown:
+#   math_engine: mathjax
   
- defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "default"
+#  defaults:
+#   - scope:
+#       path: ""
+#       type: "posts"
+#     values:
+#       layout: "default"
 
 
 # remote_theme: HollisChen/jekyll-gitbook
