@@ -6,6 +6,8 @@ The following are Note Links:
 
 [Models of the Neuron Learning Notes](https://hollischen.github.io/NoteSharing/Models%20of%20the%20Neuron%20Class%20Notes/Models%20of%20the%20Neuron%20Learning%20Notes)
 
+[Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model.html)
+
 [Bayesian Statistics](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Bayesian%20Statistics)
 
 [Mathematics Notes](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Mathematics%20Notes)
