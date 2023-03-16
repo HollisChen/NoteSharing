@@ -2,15 +2,15 @@
 title:            Hollis Note Sharing
 description:      Be Happy
 
-plugins:
-  - jekyll-spaceship
+# plugins:
+#   - jekyll-spaceship
 
-kramdown:
-  input: GFM
-  math_engine: mathjax
-  mathjax:
-    input: TeX
-    output: HTML-CSS
+# kramdown:
+#   input: GFM
+#   math_engine: mathjax
+#   mathjax:
+#     input: TeX
+#     output: HTML-CSS
   
 #  defaults:
 #   - scope:
