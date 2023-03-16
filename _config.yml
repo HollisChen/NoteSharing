@@ -2,11 +2,17 @@
 title:            Hollis Note Sharing
 description:      Be Happy
 
-markdown:         kramdown
+# markdown:         kramdown
+# kramdown:
+#   input:                  GFM
+#   math_engine:            mathjax
+
+markdown: kramdown
 kramdown:
-  input:                  GFM
-  math_engine:            mathjax
-  
+  math_engine: mathjax
+  mathjax:
+    output: "SVG"
+
 #  defaults:
 #   - scope:
 #       path: ""
