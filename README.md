@@ -8,6 +8,8 @@ The following are Note Links:
 
 [Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model.html)
 
+[AI Academic Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/AI%20Academic%20Notes)
+
 [Bayesian Statistics](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Bayesian%20Statistics)
 
 [Mathematics Notes](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Mathematics%20Notes)
