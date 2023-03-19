@@ -29,3 +29,5 @@ The following are Note Links:
 The following are Paper Links:
 
 [PhD Thesis Guangyu Robert Yang](https://hollischen.github.io/NoteSharing/Papers/PhD%20Thesis%20Guangyu%20Robert%20Yang.pdf)
+
+[Semi-supervised learning literature survey](https://hollischen.github.io/NoteSharing/Papers/Semi-supervised%20learning%20literature%20survey.pdf)
