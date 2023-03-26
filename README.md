@@ -14,6 +14,8 @@ The following are Note Links:
 
 [Mathematics Notes](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Mathematics%20Notes)
 
+[Convolution](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Convolution.pdf)
+
 [G.R.Yang PhD Thesis Reading Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/G.R.Yang%20PhD%20Thesis%20Reading%20Notes)
 
 [Complex Networks for Asynchronous Representation Paper Reading Notes](https://hollischen.github.io/NoteSharing/ZhengHao%20Project/CNAP%20Paper%20Reading%20Notes)
