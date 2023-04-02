@@ -16,6 +16,8 @@ The following are Note Links:
 
 [Convolution](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Convolution.pdf)
 
+[Poisson Distribution](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Poisson%20Distribution.pdf)
+
 [G.R.Yang PhD Thesis Reading Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/G.R.Yang%20PhD%20Thesis%20Reading%20Notes)
 
 [Complex Networks for Asynchronous Representation Paper Reading Notes](https://hollischen.github.io/NoteSharing/ZhengHao%20Project/CNAP%20Paper%20Reading%20Notes)
