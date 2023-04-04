@@ -18,6 +18,8 @@ The following are Note Links:
 
 [Poisson Distribution](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Poisson%20Distribution.pdf)
 
+[First-Order System of Differential Equations](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/First-Order%20System%20of%20Differential%20Equations.pdf)
+
 [G.R.Yang PhD Thesis Reading Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/G.R.Yang%20PhD%20Thesis%20Reading%20Notes)
 
 [Complex Networks for Asynchronous Representation Paper Reading Notes](https://hollischen.github.io/NoteSharing/ZhengHao%20Project/CNAP%20Paper%20Reading%20Notes)
