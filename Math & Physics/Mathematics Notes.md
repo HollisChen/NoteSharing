@@ -52,6 +52,34 @@ $= ϕ_X(t) · ϕ_Y(t)$
 
 Thus, we have shown that the characteristic function of the sum of two independent random variables is simply the product of their individual characteristic functions.
 
+### Law of total variance
+
+In probability theory, **the law of total variance** or **variance decomposition formula** or **conditional variance formulas** or **law of iterated variances**, also known as **Eve's law**, states that if $X$ and $Y$ are random variables on the same probability space, and the variance of  $X$ is finite, then
+
+$\operatorname{Var}_X[X]=\mathrm{E}_Y[\operatorname{Var}_X[X \mid Y]]+\operatorname{Var}_Y[\mathrm{E}_X[X \mid Y]]$
+
+Proof:
+
+The law of total variance can be proved using **the law of total expectation** ($\mathrm{E}_X[X]=\mathrm{E}_Y[\mathrm{E}_X[X \mid Y]]$).  First,
+
+$\operatorname{Var}[X]=\mathrm{E}\left[X^{2}\right]-\mathrm{E}[X]^{2}$
+
+from the definition of variance. Again, from the definition of variance, and applying the law of total expectation, we have
+
+$\mathrm{E}\left[X^{2}\right]=\mathrm{E}_Y\left[\mathrm{E}_X\left[X^{2} \mid Y\right]\right]=\mathrm{E}_Y\left[\operatorname{Var}_X[X \mid Y]+[\mathrm{E}_X[X \mid Y]]^{2}\right]$
+
+Now we rewrite the conditional second moment of  $X$  in terms of its variance and first moment, and apply the law of total expectation on the right hand side:
+
+$\mathrm{E}\left[X^{2}\right]-\mathrm{E}[X]^{2}=\mathrm{E}_Y\left[\operatorname{Var}_X[X \mid Y]+[\mathrm{E}_X[X \mid Y]]^{2}\right]-[\mathrm{E}_Y[\mathrm{E}_X[X \mid Y]]]^{2}$
+
+Since the expectation of a sum is the sum of expectations, the terms can now be regrouped:
+
+$=(\mathrm{E}_Y[\operatorname{Var}_X[X \mid Y]])+\left(\mathrm{E}_Y\left[\mathrm{E}_X[X \mid Y]^{2}\right]-[\mathrm{E}_Y[\mathrm{E}_X[X \mid Y]]]^{2}\right)$
+
+Finally, we recognize the terms in the second set of parentheses as the variance of the conditional expectation  $\mathrm{E}[X \mid Y]$:
+
+$=\mathrm{E}_Y[\operatorname{Var}_X[X \mid Y]]+\operatorname{Var}_Y[\mathrm{E}_X[X \mid Y]]$
+
 ## Topology
 
 ### Manifold
