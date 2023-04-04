@@ -1,4 +1,4 @@
-[Go to My Github Repo.](https://github.com/HollisChen/NoteSharing)
+[Go to My Github Repo.](https://github.com/HollisChen/NoteSharing) [Go to my Github Page.](https://hollischen.github.io/NoteSharing/)
 
 The following are Neuroscience Notes:
 
