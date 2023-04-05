@@ -52,6 +52,8 @@ $= ϕ_X(t) · ϕ_Y(t)$
 
 Thus, we have shown that the characteristic function of the sum of two independent random variables is simply the product of their individual characteristic functions.
 
+(What if $X$ and $Y$ are not independent? There should be a generalized formula including covariances.)
+
 ### Law of total variance
 
 In probability theory, **the law of total variance** or **variance decomposition formula** or **conditional variance formulas** or **law of iterated variances**, also known as **Eve's law**, states that if $X$ and $Y$ are random variables on the same probability space, and the variance of  $X$ is finite, then
@@ -76,9 +78,19 @@ Since the expectation of a sum is the sum of expectations, the terms can now be 
 
 $=(\mathrm{E}_Y[\operatorname{Var}_X[X \mid Y]])+\left(\mathrm{E}_Y\left[\mathrm{E}_X[X \mid Y]^{2}\right]-[\mathrm{E}_Y[\mathrm{E}_X[X \mid Y]]]^{2}\right)$
 
-Finally, we recognize the terms in the second set of parentheses as the variance of the conditional expectation  $\mathrm{E}[X \mid Y]$:
+Finally, we recognize the terms in the second set of parentheses as the variance of the conditional expectation  $\mathrm{E}_X[X \mid Y]$:
 
 $=\mathrm{E}_Y[\operatorname{Var}_X[X \mid Y]]+\operatorname{Var}_Y[\mathrm{E}_X[X \mid Y]]$
+
+### Random field
+
+A random field is a mathematical concept used in probability theory and statistics to describe a collection of random variables indexed by a spatial or temporal domain. Unlike a sequence of random variables, where the index set is typically the set of natural numbers, a random field has an index set that is a more complex mathematical space, such as a region of space or time.
+
+In the case of a spatial random field, the index set may be a subset of Euclidean space, such as a two-dimensional plane, and the random variables may represent physical quantities such as temperature or pressure at different locations in the domain. In the case of a temporal random field, the index set may be a subset of the real line, and the random variables may represent values of a time-varying process at different points in time.
+
+Random fields are useful for modeling and analyzing complex data that have a spatial or temporal structure, such as climate data, geostatistical data, and image data. They are also used in machine learning and artificial intelligence applications such as image and signal processing, where the input data is often structured as a random field.
+
+
 
 ## Topology
 
