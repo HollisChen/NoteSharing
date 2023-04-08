@@ -49,3 +49,9 @@ The following are English Notes:
 The following are Blogs:
 
 [Efficiency from Wechat](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1550412738877816833&__biz=MzI0NDU0OTIxOA==#wechat_redirect)
+
+The following are KaoYan Notes:
+
+[信号与系统考研笔记](https://hollischen.github.io/NoteSharing/KaoYan/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0.pdf)
+
+
