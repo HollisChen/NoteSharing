@@ -54,4 +54,12 @@ The following are KaoYan Notes:
 
 [信号与系统考研笔记](https://hollischen.github.io/NoteSharing/KaoYan/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0.pdf)
 
+[概率论考研笔记](https://hollischen.github.io/NoteSharing/KaoYan/%E6%A6%82%E7%8E%87%E8%AE%BA%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0.pdf)
+
+[线性代数考研笔记(知识点和习题)2021](https://hollischen.github.io/NoteSharing/KaoYan/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0(%E7%9F%A5%E8%AF%86%E7%82%B9%E5%92%8C%E4%B9%A0%E9%A2%98)2021.pdf)
+
+[微积分(含关键公式摘录)考研笔记](https://hollischen.github.io/NoteSharing/KaoYan/%E5%BE%AE%E7%A7%AF%E5%88%86(%E5%90%AB%E5%85%B3%E9%94%AE%E5%85%AC%E5%BC%8F%E6%91%98%E5%BD%95)%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0.pdf)
+
+[微积分线代概率论难题考研笔记](https://hollischen.github.io/NoteSharing/KaoYan/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%BA%BF%E4%BB%A3%E6%A6%82%E7%8E%87%E8%AE%BA%E9%9A%BE%E9%A2%98%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0.pdf)
+
 
