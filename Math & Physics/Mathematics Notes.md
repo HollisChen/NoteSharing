@@ -1,10 +1,12 @@
 # Mathematics Notes
 
+[TOC]
+
 ## Linear Algebra
 
 ### Associative law of matrix multiplication
 
-There is a premise for matrix multiplication: when the number of columns of matrix $A$ is equal to the number of rows of matrix $B$, $A$ and $B$ can be multiplied. So for the column vectors $w$ and $x$, we will find that $w^Txx≠w^T(xx)$, this is not because the associative law of matrix multiplication, i.e., $(AB)C=A(BC)$, fails, but the premise of matrix multiplication is destroyed. As long as the matrix can be multiplied, the associative law must be satisfied. Here, because $x$ is a column vector, it cannot be multiplied by itself. This situation is caused by a row vector right multiplied by a column vector with the same length makes a scalar, or we can split a scalar into the multiplication of a row vector and of a same length column vector, but the resulting row and column vectors may not necessarily be able to be multiplied by the matrix before or after them (does not satisfy the above premise); if not, the associative law cannot be used. Sometimes. the associative law of matrix multiplication can be successfully used by adjusting the position of the scalar, like $w^T x$ in $w^Txx≠w^T(xx)$. We can put $w^T x$ after the second $x$ so that $w^T x x = x (w^T x)$, then $w^T x x = x (w^T x) = x (w^T x)^T = x (x^T w) = x x^T w$, where $x (w^T x) = x (w^T x)^T$ because $w^T x$ is a scalar and $x (x^T w) = x x^T w$ because $x$ and $x^T$ satisfy the premise of matrix multiplication then the associative law holds.
+There is **a premise for matrix multiplication**: when the number of columns of matrix $A$ is equal to the number of rows of matrix $B$, $A$ and $B$ can be multiplied. So for the column vectors $w$ and $x$, we will find that $w^Txx≠w^T(xx)$, this is not because the associative law of matrix multiplication, i.e., $(AB)C=A(BC)$, fails, but the premise of matrix multiplication is destroyed. As long as the matrix can be multiplied, the associative law must be satisfied. Here, because $x$ is a column vector, it cannot be multiplied by itself. This situation is caused by a row vector right multiplied by a column vector with the same length makes a scalar, or we can split a scalar into the multiplication of a row vector and of a same length column vector, but the resulting row and column vectors may not necessarily be able to be multiplied by the matrix before or after them (does not satisfy the above premise); if not, the associative law cannot be used. Sometimes. the associative law of matrix multiplication can be successfully used by adjusting the position of the scalar, like $w^T x$ in $w^Txx≠w^T(xx)$. We can put $w^T x$ after the second $x$ so that $w^T x x = x (w^T x)$, then $w^T x x = x (w^T x) = x (w^T x)^T = x (x^T w) = x x^T w$, where $x (w^T x) = x (w^T x)^T$ because $w^T x$ is a scalar and $x (x^T w) = x x^T w$ because $x$ and $x^T$ satisfy the premise of matrix multiplication then the associative law holds.
 
 ### Algebraic and geometric multiplicities
 
@@ -39,6 +41,76 @@ $$
 The expit function is a sigmoid function that maps any real-valued number to the range of 0 to 1. It is commonly used in machine learning and statistics for tasks such as binary classification. The name "expit" comes from the combination of "exponential" and "logit".
 
 (quantile function and logistic function?)
+
+### Logistic regression
+
+Logistic regression is a statistical method for analyzing a dataset in which there are one or more independent variables (predictors) that determine the dependent variable (outcome), which is a binary variable, taking the values 0 or 1.  It is a type of generalized linear model (GLM) that is used for predicting the probability of an outcome.
+
+Let $\eta$ be the output value of the logit function, where $O =\frac{p}{1-p}$ is called the odds.
+$$
+\eta = \mathrm{logit}(p)=\mathrm{log}\left(\frac{p}{1-p}\right)
+$$
+You can go backwards from the logit function to the probability with the expit function, as shown in [Logit function and expit function](#Logit-function-and-expit-function).
+$$
+p=\frac{e^\eta}{e^\eta+1}= \frac{1}{1+e^{-\eta}}
+$$
+We model the log of the odds as linear. This is called **logistic regression**.
+$$
+\eta=\mathrm{logit}\left\{P(Y=1\mid X)\right\}=\beta_{0}+\beta_{1}X
+$$
+The nice part about this model is that $e^{\beta_1 X}$ has the nice interpretation of the odds ratio associated with a one unit change in $X$. Actually, we can have $\boldsymbol{X}=[X_1, X_2, \dots, X_N]$, then 
+$$
+\begin{array}{l}
+\eta&=\mathrm{logit}\left\{P(Y=1\mid \boldsymbol{X})\right\}\\
+&=\mathrm{logit}\left\{P(Y=1\mid X_1,X_2,\dots,X_N)\right\}\\
+&=\beta_{0}+\beta_{1}X_1+\beta_{2}X_2+\dots+\beta_{N}X_N
+\end{array}
+$$
+where we can see that  $P(Y = 1 | \boldsymbol{X})$ is the probability of the binary outcome being $1$ given the predictor variables $\boldsymbol{X}$, and $\eta$ is a linear combination of the predictor variables.
+
+In the following, we consider the simple form $\eta=\mathrm{logit}\left\{P(Y=1\mid X)\right\}=\beta_{0}+\beta_{1}X$.
+
+Consider a dataset $y_1,y_2,\dots,y_n$ and $x_1,x_2,\dots,x_n$. 
+
+We need a function of the probabilities to optimize the problem to obtain the optimal $\boldsymbol{\beta}=[\beta_{0},\beta_{1}]$. It is the **cross entropy**.
+$$
+\begin{array}{l}
+&\mathrm{Cross\,\,Entropy}\\
+&=-\sum_{i=1}^{n}\left[y_{i}\log\{P(Y=y_i\mid X=x_{i},\boldsymbol{\beta})\}+(1-y_{i})\log\{P(Y=1-y_{i}\mid X=x_{i},\boldsymbol{\beta})\}\right] \\
+&=-\sum_{i=1}^{n}\left[y_{i}\log\{P(Y=y_i\mid X=x_{i},\boldsymbol{\beta})\}+(1-y_{i})\log\{1-P(Y=y_{i}\mid X=x_{i},\boldsymbol{\beta})\}\right]\\
+&=-\sum_{i=1}^{n}\left[y_{i}\log\left\{\frac{P(Y=y_i\mid X=x_{i},\boldsymbol{\beta})}{1-P(Y=y_{i}\mid X=x_{i},\boldsymbol{\beta})}\right\}+\log\{1-P(Y=y_{i}\mid X=x_{i},\boldsymbol{\beta})\}\right]\\
+&= -\sum_{i=1}^{n}\left[y_i\eta_i + \log{\dfrac{1}{1+e^{\eta_i}}}\right]\\
+\end{array}
+$$
+where $y_i=0$ or $1$. Note when $y_i=1$, $\log\left\{\frac{P(Y=y_i\mid X=x_{i},\boldsymbol{\beta})}{1-P(Y=y_{i}\mid X=x_{i},\boldsymbol{\beta})}\right\}=\eta_i$, then $y_i\log\left\{\frac{P(Y=y_i\mid X=x_{i},\boldsymbol{\beta})}{1-P(Y=y_{i}\mid X=x_{i},\boldsymbol{\beta})}\right\}=y_i\eta_i$; when $y_i=0$,  $y_i\log\left\{\frac{P(Y=y_i\mid X=x_{i},\boldsymbol{\beta})}{1-P(Y=y_{i}\mid X=x_{i},\boldsymbol{\beta})}\right\}=y_i\eta_i=0$
+
+We will show that the above result is same as the one resulting from the maximum likelihood estimation (MLE). 
+
+First, we have
+$$
+P(Y=y_i|X=x_{i})=p_{i}^{y_i}(1-p_{i})^{1-y_i}\;\;\;y_i\in\{0,1\}
+$$
+
+where $p_{i}=P(Y=1|X=x_{i})$ and $1-p_{i}=P(Y=0|X=x_{i})$.
+
+Then, the joint probability of the data is
+$$
+\begin{align*}
+&\prod_{i=1}^n p_{i}^{y_i}(1-p_{i})^{1-y_i} \\
+=&\prod_{i=1}^n \left(\frac{e^{\beta_{0}+\beta_{1}x_{i}}}{1+e^{\beta_{0}+\beta_{1}x_{i}}}\right)^{y_{i}}\left(\frac{1}{1+e^{\beta_{0}+\beta_{1}x_{i}}}\right)^{1-y_{i}} \\
+=&\exp\left\{\beta_{0}\sum_{i=1}^{n}y_{i}+\beta_{1}\sum_{i=1}^{n}y_{i}x_{i}\right\}\times\prod_{i=1}^{n}\left({\frac{1}{1+e^{\beta_{0}+\beta_{1}x_{i}}}}\right)
+\end{align*}
+$$
+
+where we take the joint probability and plug in the actual $y_i$ and $x_i$ that we observed and view it as a function of $\beta_0$ and $\beta_1$, it’s called a **likelihood**. A likelihood is the joint probability with the observed data plugged in and maximum likelihood finds the values of the parameters that makes the data that we observed most likely.
+
+Generally, since sums are more convenient than products, we take the natural logarithm. Then, this works out to be:
+$$
+\beta_{0}\sum_{i=1}^{n}y_{i}+\beta_{1}\sum_{i=1}^{n}y_{i}x_{i}-\sum_{i=1}^{n}\log\left(1+e^{\beta_{0}+\beta_{1}x_{i}}\right)
+$$
+This is the function that we maximizes over $\beta_0$ and $\beta_1$ to obtain the estimates. It is equivalent to (same as) minimizing the cross entropy.
+
+**Linear regression is also MLE**: Linear regression can be viewed as an MLE problem when we assume the error term follows a normal distribution with a mean of zero and constant variance.
 
 ### Characteristic functions
 
@@ -107,8 +179,6 @@ A random field is a mathematical concept used in probability theory and statisti
 In the case of a spatial random field, the index set may be a subset of Euclidean space, such as a two-dimensional plane, and the random variables may represent physical quantities such as temperature or pressure at different locations in the domain. In the case of a temporal random field, the index set may be a subset of the real line, and the random variables may represent values of a time-varying process at different points in time.
 
 Random fields are useful for modeling and analyzing complex data that have a spatial or temporal structure, such as climate data, geostatistical data, and image data. They are also used in machine learning and artificial intelligence applications such as image and signal processing, where the input data is often structured as a random field.
-
-
 
 ## Topology
 
@@ -325,6 +395,6 @@ $R(0) = ∫_{-∞}^{∞} S(ω) dω$
 
 However, this does not mean that $τ = 0$ is required when calculating the PSD from the autocorrelation function. But for a white noise, $R(\tau)=\mathrm{E}\left.[n(t)n(t-\tau)\right.]=\delta(\tau)$, that is, $R(\tau)=0$ if $\tau \neq 0$.
 
-(What is the definition of the PSD? It should not be related to Winer-Khinchin theorem)
+(What is the definition of the PSD? It should not be related to Winer-Khinchin theorem. Then how to understand the  Winer-Khinchin theorem. from the perspective of the definition.)
 
 ### Parseval's theorem
