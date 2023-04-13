@@ -6,6 +6,10 @@ The following are Neuroscience Notes:
 
 [Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model.html)
 
+[ICV_SunBurst](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/ICV_Plots/ICV_SunBurst.html)
+
+[ICV_SankeyDiagram](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/ICV_Plots/ICV_SankeyDiagram.html)
+
 The following are AI Notes:
 
 [AI Academic Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/AI%20Academic%20Notes)
