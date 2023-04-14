@@ -36,6 +36,8 @@ dimensionality理解为“维度性”，an infinite dimensionality解释为“�
 
 ○ **What is the corpus callosum? Why is the corpus callosum called corpus callosum?**
 
+/ˈkɔr.pəs kəˈloʊ.səm/
+
 The corpus callosum is a large bundle of nerve fibers that connects the left and right hemispheres of the brain. It allows for communication and coordination between the two hemispheres. Damage to the corpus callosum can result in a condition called agenesis of the corpus callosum, which can cause a variety of neurological symptoms.
 
 The corpus callosum is called corpus callosum in Latin, which means "tough body" or "tough cord". The name is likely a reference to the thick bundle of nerve fibers that make up the structure. It is also because the corpus callosum is one of the most robust structure in the brain and it helps to connect the two hemispheres of the brain and allows for communication and coordination between them.
@@ -153,4 +155,20 @@ The use of the word "regime" in this context is a metaphor borrowed from other f
 ### 科研观点
 
 This paper basically gives a simple “one-fits-all” function that can mimic different types of neurons with different firing regimes by changing the parameters a, b, c, and d of the function. The function can be viewed as a reduction form of the Hodgkin–Huxley-type neuronal models, which are complex and accurate. More detailed derivation and analysis of the simple mode is included in the author's book "Dynamical Systems in Neuroscience: The Geometry of Excitability and Bursting".
+
+## Complex-Valued Autoencoders for Object Discovery  
+
+### 知识积累
+
+- It is said that most works on unsupervised object discovery focus on slot-based approaches. What are the slot-based approaches 
+
+  Slot-based approaches are a type of unsupervised object discovery method that seeks to identify and segment objects in images without the use of any supervised labels. In slot-based approaches, objects are represented as a collection of spatially disjoint "slots," where each slot corresponds to a localized region of the image that is likely to contain a single object. These slots can be identified using various clustering or segmentation techniques, such as k-means clustering or mean-shift clustering. Once the slots have been identified, they can be grouped together based on various criteria, such as proximity or visual similarity, to form coherent object representations. Slot-based approaches have been used in a variety of computer vision applications, such as object recognition, segmentation, and tracking.
+
+- What do activations mean in neural networks?
+
+  Activations in neural networks refer to the output values produced by each neuron in a neural network after applying an activation function. The activation function is typically applied to the weighted sum of the inputs to the neuron, and the result is the activation or output of that neuron. These activations are then passed on as inputs to the next layer of neurons in the network. The activations are a critical part of the network's output and are used to make predictions or decisions.
+
+- 
+
+### 科研观点
 
