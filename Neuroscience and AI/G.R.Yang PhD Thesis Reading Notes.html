@@ -1,0 +1,554 @@
+<!doctype html>
+<html style='font-size:20px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>G.R.Yang PhD Thesis Reading Notes</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+
+/*!
+Misty Light
+Brought to you with ❤️ by E-Tiger Studio, 2017-2020
+https://github.com/etigerstudio/typora-misty-theme
+ */
+:root {
+  --control-text-color: #777;
+  --side-bar-bg-color: #f6f8fa
+}
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: subpixel-antialiased
+}
+body {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #24292e;
+  line-height: 1.5
+}
+#write {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 30px 100px
+}
+#write > ol:first-child,
+#write > ul:first-child {
+  margin-top: 30px
+}
+body > :first-child {
+  margin-top: 0!important
+}
+body > :last-child {
+  margin-bottom: 0!important
+}
+a {
+  color: #4183c4
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  cursor: text;
+  color: #142331
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+  text-decoration: none
+}
+h1 code,
+h1 tt,
+h2 code,
+h2 tt,
+h3 code,
+h3 tt,
+h4 code,
+h4 tt,
+h5 code,
+h5 tt,
+h6 code,
+h6 tt {
+  font-size: inherit
+}
+h1 {
+  text-align: center;
+  padding-bottom: .3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  margin: 1em auto 1.2em
+}
+h1:after {
+  border-bottom: 2px dashed #afec9e;
+  content: '';
+  width: 100px;
+  display: block;
+  margin: .2em auto 0;
+  height: 2px
+}
+h2 {
+  font-size: 1.75em;
+  padding-left: 9px;
+  line-height: 1.4;
+  border-left: 6px solid #cce5ff
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43
+}
+h3:before {
+  border-radius: 50%;
+  background-color: #9ed0ff;
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 6px;
+  vertical-align: middle;
+  margin-bottom: .18em;
+  margin-right: 8px
+}
+#write > h3.md-focus:before,
+#write > h4.md-focus:before {
+  background-color: transparent;
+  width: auto;
+  height: auto
+}
+h4 {
+  font-size: 1.25em
+}
+h4:before {
+  background-color: #9ed0ff;
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 2px;
+  vertical-align: middle;
+  margin-bottom: .18em;
+  margin-right: 8px
+}
+h5 {
+  font-size: 1em
+}
+h6 {
+  font-size: 1em;
+  color: #777
+}
+blockquote,
+dl,
+ol,
+p,
+table,
+ul {
+  margin: .8em 0
+}
+li > ol,
+li > ul {
+  margin: 0
+}
+hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0
+}
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6,
+body>h1:first-child,
+body>h1:first-child+h2,
+body>h2:first-child,
+body>h3:first-child,
+body>h4:first-child,
+body>h5:first-child,
+body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0
+}
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+  margin-top: 0
+}
+li p.first {
+  display: inline-block
+}
+ol,
+ul {
+  padding-left: 30px
+}
+ol:first-child,
+ul:first-child {
+  margin-top: 0
+}
+ol:last-child,
+ul:last-child {
+  margin-bottom: 0
+}
+blockquote {
+  border-left: 4px dotted #e5e8e8;
+  padding: 0 12px;
+  color: #444;
+  font-size: .9em
+}
+blockquote blockquote {
+  padding-right: 0
+}
+table {
+  padding: 0;
+  word-break: initial
+}
+table tr {
+  border-top: 1px solid #dadfe6;
+  margin: 0;
+  padding: 0
+}
+table.md-table tr:nth-child(2n) {
+  background-color: #fafbfc
+}
+table tr td,
+table tr th {
+  border: 1px solid #dadfe6;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px
+}
+table tr td:first-child,
+table tr th:first-child {
+  margin-top: 0
+}
+table tr td:last-child,
+table tr th:last-child {
+  margin-bottom: 0
+}
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd
+}
+.md-fences,
+code,
+tt {
+  font-size: 90%;
+  border-radius: 3px;
+  font-family: "SF Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace
+}
+code,
+tt {
+  margin: 0 2px;
+  padding: 2px 4px;
+  background-color: #e2f0ff
+}
+.md-fences {
+  background-color: #f6f8fa;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 12px 1em
+}
+.md-task-list-item > input {
+  margin-left: -1.45em;
+  margin-top: calc(1em - 10px)
+}
+#write pre.md-meta-block {
+  padding: 1rem;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7faf6;
+  border: 0;
+  border-radius: 3px;
+  color: #777;
+  margin-top: 0!important
+}
+.mathjax-block > .code-tooltip {
+  bottom: .375rem
+}
+#write > h3.md-focus:before {
+  left: -1.5625rem;
+  top: .375rem
+}
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before {
+  left: -1.5625rem;
+  top: .285714286rem
+}
+.md-image > .md-meta {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "SF Mono",Consolas,"Liberation Mono",Courier,monospace;
+  padding: 2px 4px 0;
+  font-size: .9em;
+  color: inherit
+}
+.md-tag {
+  color: inherit
+}
+.md-toc {
+  margin-top: 20px;
+  padding-bottom: 20px
+}
+.sidebar-tabs {
+  border-bottom: none
+}
+#typora-quick-open {
+  border: 1px solid #ddd;
+  background-color: #f8f8f8
+}
+#typora-quick-open-item {
+  background-color: #fafafa;
+  border-color: #fefefe #e5e5e5 #e5e5e5 #eee;
+  border-style: solid;
+  border-width: 1px
+}
+.typora-quick-open-item {
+  padding-top: 3px
+}
+.typora-quick-open-list {
+  margin-top: 4px
+}
+.typora-quick-open-item-path {
+  margin-top: -2px
+}
+#md-notification:before {
+  top: 10px
+}
+.on-focus-mode blockquote {
+  border-left-color: rgba(85,85,85,.12)
+}
+.context-menu,
+.megamenu-content,
+footer,
+header {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+  visibility: visible
+}
+.mac-seamless-mode #typora-sidebar {
+  background-color: var(--side-bar-bg-color)
+}
+.md-lang {
+  color: #b4654d
+}
+.pin-outline #outline-content .outline-active strong,
+.pin-outline .outline-active {
+  color: #232323;
+  font-weight: 600
+}
+.outline-label {
+  color: #646464;
+  font-weight: 400
+}
+.file-list-item-summary {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+@media print {
+  body {
+    font-weight: 400
+  }
+  b,
+  strong {
+    font-weight: 600
+  }
+  pre,
+  table {
+    page-break-inside: avoid
+  }
+  pre {
+    word-wrap: break-word
+  }
+}
+body {
+  font-weight: 400;
+  -webkit-font-smoothing: unset
+}
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 600
+}
+h1,
+table tr th {
+  font-weight: 400
+}
+.file-list-item-file-name {
+  font-weight: 500
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="gryang-phd-thesis-reading-notes" class="md-header-anchor"></a><span>G.R.Yang PhD Thesis Reading Notes</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#gryang-phd-thesis-reading-notes">G.R.Yang PhD Thesis Reading Notes</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n3"><a class="md-toc-inner" href="#what-is-the-cognitive-flexibility">What is the cognitive flexibility? </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n17"><a class="md-toc-inner" href="#proprioceptive-interoceptive-exteroceptive-information">Proprioceptive, interoceptive, exteroceptive information</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n46"><a class="md-toc-inner" href="#what-are-interneurons">What are interneurons?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n59"><a class="md-toc-inner" href="#an-overview-of-the-major-components-of-the-brain">An overview of the major components of the brain</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n82"><a class="md-toc-inner" href="#ventricles-and-cerebrospinal-fluid-csf">Ventricles and cerebrospinal fluid (CSF)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n102"><a class="md-toc-inner" href="#fold-gyrus-sulcus-folium">Fold, gyrus, sulcus, folium</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n118"><a class="md-toc-inner" href="#what-are-dendrite-targeting-interneurons-what-are-soma-targeting-interneurons">What are dendrite-targeting interneurons? What are soma-targeting interneurons?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n122"><a class="md-toc-inner" href="#whar-does-v1-mean-in-neuroscience">Whar does V1 mean in neuroscience?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n126"><a class="md-toc-inner" href="#what-are-pyramidal-neurons">What are pyramidal neurons?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n138"><a class="md-toc-inner" href="#what-is-the-visual-area-mt">What is the visual area MT?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n141"><a class="md-toc-inner" href="#what-does-temporal-mean">What does "temporal" mean?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n144"><a class="md-toc-inner" href="#mt-is-not-in-the-temporal-lobe-but-in-the-occipital-lobe">MT is not in the temporal lobe but in the occipital lobe?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n146"><a class="md-toc-inner" href="#what-are-they-cells-expressing-parvalbumin-pv-somatostatin-som-or-sst-and-the-serotonin-receptor-5ht3a-5ht3ar">What are they: cells expressing parvalbumin (PV), somatostatin (SOM or SST), and the serotonin receptor 5HT3a (5HT3aR)？</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n194"><a class="md-toc-inner" href="#what-are-sst-positive-neurons">What are SST-positive neurons?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n199"><a class="md-toc-inner" href="#what-is-a-peptide">What is a peptide?</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n202"><a class="md-toc-inner" href="#what-are-the-epicycle-and-deferent">What are the epicycle and deferent?</a></span></p></div><h3><a name="what-is-the-cognitive-flexibility" class="md-header-anchor"></a><span>What is the cognitive flexibility? </span></h3><p><span>Cognitive flexibility is </span><strong><span>an essential aspect of human cognition that refers to the ability to adapt and adjust one&#39;s thinking and behavior in response to changing circumstances, rules, or goals.</span></strong><span> It is a component of executive functions, which are higher-order cognitive processes that enable individuals to plan, problem-solve, and make decisions. Cognitive flexibility allows individuals to shift their attention, adapt to new situations, and switch between tasks or mental sets effectively.</span></p><p><span>Cognitive flexibility involves several key aspects:</span></p><ol start='' ><li><span>Mental set shifting: This refers to the ability to disengage from one task or thought process and shift to another. Mental set shifting enables individuals to transition smoothly between different tasks or problem-solving strategies.</span></li><li><span>Adaptability: Cognitive flexibility allows individuals to adapt to novel situations and changing conditions quickly. This includes modifying one&#39;s behavior or approach in response to new information, unexpected obstacles, or altered goals.</span></li><li><span>Perspective-taking: Flexible thinking also involves the ability to consider different perspectives and viewpoints, which can be essential for problem-solving, decision-making, and social interactions.</span></li><li><span>Updating information: Cognitive flexibility is crucial for updating beliefs and information in light of new evidence or experiences. It enables individuals to learn from their mistakes and adjust their strategies accordingly.</span></li></ol><p><span>Cognitive flexibility is essential for various cognitive functions and everyday activities, such as learning new skills, multitasking, problem-solving, and adapting to new environments. Deficits in cognitive flexibility can be observed in certain neurological and psychiatric conditions, such as autism spectrum disorder, attention deficit hyperactivity disorder (ADHD), and obsessive-compulsive disorder (OCD).</span></p><p><span>Researchers are actively investigating the neural basis of cognitive flexibility, focusing on the role of prefrontal cortex (PFC) and its interactions with other brain regions, such as the basal ganglia, hippocampus, and parietal cortex. Understanding the neural mechanisms underlying cognitive flexibility may lead to new treatments for cognitive disorders and the development of artificial intelligence systems that more closely mimic the adaptive nature of human cognition.</span></p><h3><a name="proprioceptive-interoceptive-exteroceptive-information" class="md-header-anchor"></a><span>Proprioceptive, interoceptive, exteroceptive information</span></h3><blockquote><p><span>Proprioceptive /prəʊˌpriːəˈsɛptɪv/</span></p><p><span>Adjective [</span><em><span>Physiology</span></em><span>] relating to stimuli that are produced and perceived within an organism, especially those connected with the position and movement of the body [生理] 本体感受的，本体感觉的。</span></p><p><span>Interoceptive /ˌɪntərəʊˈsɛptɪv/</span></p><p><span>Adjective [</span><em><span>Physiology</span></em><span>] relating to stimuli produced within an organism, especially in the gut and other internal organs [生理] 内感受的，与内脏器官(尤指肠胃等)内产生刺激有关的。</span></p><p><span>Exteroceptive /ˌekstərəʊˈsɛptɪv/</span></p><p><span>Adjective [</span><em><span>Physiology</span></em><span>] relating to stimuli that are external to an organism [生理] 外感受性的。</span></p></blockquote><p><span>Proprioception, interoception, and exteroception refer to different types of sensory information that the body processes to inform us about our environment, the state of our body, and our position in space. Here&#39;s a brief overview of each:</span></p><ol start='' ><li><p><span>Proprioception: Proprioception is the sense of the position and movement of our body parts relative to each other. It allows us to know where our limbs are and how they are oriented without looking at them directly. Proprioceptive information is provided by specialized sensory receptors located in muscles, tendons, and joints called proprioceptors. These receptors detect changes in muscle tension, joint position, and movement, allowing us to maintain balance, coordinate our movements, and perform complex motor tasks.</span></p></li><li><p><span>Interoception: Interoception refers to the perception of internal bodily sensations and the physiological state of our body. Interoceptive information comes from sensory receptors located in various internal organs and structures, such as the heart, lungs, stomach, and blood vessels. These receptors monitor processes such as heart rate, respiration, hunger, thirst, temperature, and pain. Interoception is essential for maintaining homeostasis and informing us about our body&#39;s needs, emotions, and well-being.</span></p></li><li><p><span>Exteroception: Exteroception is the perception of sensory information from our external environment. Exteroceptive information is provided by various sensory systems, including:</span></p><ul><li><span>Vision: Detects light and processes visual information, such as color, shape, and movement.</span></li><li><span>Hearing: Processes auditory information, such as sound frequency, intensity, and location.</span></li><li><span>Touch: Processes tactile information, such as pressure, vibration, and texture, through receptors in the skin.</span></li><li><span>Taste: Detects chemical substances in food and beverages through receptors on the tongue.</span></li><li><span>Smell: Processes olfactory information from airborne molecules through receptors in the nasal cavity.</span></li></ul></li></ol><p><span>Exteroceptive senses help us navigate and interact with our environment, recognize objects and people, and avoid potential threats.</span></p><p><span>In summary, proprioception, interoception, and exteroception are distinct types of sensory information that collectively provide us with a comprehensive understanding of our body&#39;s position, internal state, and external surroundings. These sensory systems work together to support various cognitive and motor functions, such as perception, attention, decision-making, and action.</span></p><h3><a name="what-are-interneurons" class="md-header-anchor"></a><span>What are interneurons?</span></h3><p><span>Interneurons, also known as local circuit neurons or intrinsic neurons, are a diverse class of neurons that play a critical role in </span><strong><span>modulating and regulating the activity of neural circuits within the central nervous system (CNS)</span></strong><span>, particularly in the brain and spinal cord. They are primarily involved in </span><strong><span>processing and integrating information locally within a specific brain region or neural circuit</span></strong><span>, rather than transmitting information over long distances between different brain regions (pyramidal neurons are primarily responsible for this).</span></p><p><span>Some key features of interneurons include:</span></p><ul><li><span>Structure: Interneurons exhibit a wide range of shapes and sizes, with various types of dendritic and axonal arborizations. Generally, they have shorter axons that remain within the local area of the brain region where they are located.</span></li><li><span>Function: Interneurons can be inhibitory or excitatory, but </span><strong><span>the majority are inhibitory neurons</span></strong><span>. Inhibitory interneurons release neurotransmitters such as gamma-aminobutyric acid (GABA), which reduce the likelihood of generating an action potential in target neurons, while excitatory interneurons release neurotransmitters such as glutamate, which increase the likelihood of generating an action potential.</span></li><li><span>Connectivity: Interneurons typically form synapses with other neurons within the same brain region or neural circuit, often targeting other interneurons or specific parts of principal neurons (e.g., pyramidal neurons in the cerebral cortex). They play a crucial role in </span><strong><span>controlling the balance between excitation and inhibition in neural circuits</span></strong><span>, shaping the overall activity patterns and information processing within a given brain region.</span></li><li><span>Diversity: Interneurons are highly diverse in terms of their molecular, electrophysiological, and morphological properties. This diversity allows them to perform a wide range of functions within neural circuits, from simple inhibition to more complex forms of modulation and integration.</span></li></ul><p><span>In summary, interneurons are a diverse class of neurons that play a crucial role in modulating and regulating the activity of neural circuits within the central nervous system. They are involved in local information processing and integration, and contribute to the overall balance of excitation and inhibition within neural circuits.</span></p><p><span>see </span><a href='#what-are-they-cells-expressing-parvalbumin-pv-somatostatin-som-or-sst-and-the-serotonin-receptor-5ht3a-5ht3ar'><span>What are PV, SOM, 5HT3a?</span></a><span>.</span></p><h3><a name="an-overview-of-the-major-components-of-the-brain" class="md-header-anchor"></a><span>An overview of the major components of the brain</span></h3><p><span>The human brain is a complex and highly organized structure composed of various interconnected regions that work together to support a wide range of cognitive, motor, and emotional functions. Here&#39;s an overview of the major components of the brain:</span></p><ol start='' ><li><p><span>Cerebrum: The cerebrum is the largest part of the brain, and it is divided into two hemispheres (left and right). It is responsible for higher cognitive functions, such as perception, thinking, memory, language, and voluntary movement. The surface of the cerebrum is called the cerebral cortex, which is composed of gray matter and is highly folded to increase its surface area.</span></p><p><span>The cerebral cortex is divided into four main lobes:</span></p><p><span>a. Frontal Lobe: Associated with executive functions, such as decision-making, problem-solving, planning, working memory, and emotional regulation.</span></p><p><span>b. Parietal Lobe: Involved in the processing of sensory information from the body and integrating it with other cognitive functions, such as attention and spatial awareness.</span></p><p><span>c. Temporal Lobe: Responsible for auditory processing, memory, and certain aspects of language processing.</span></p><p><span>d. Occipital Lobe: Dedicated to visual processing and interpretation.</span></p></li><li><p><span>Limbic System: A group of interconnected structures that play a crucial role in emotional processing, memory, and motivation. The limbic system includes the amygdala, hippocampus, cingulate cortex (including the anterior cingulate cortex (ACC) and the posterior cingulate cortex (PCC)), and other structures.</span></p></li><li><p><span>Thalamus: Located near the center of the brain, the thalamus is a relay station for most sensory information and is involved in regulating consciousness, sleep, and alertness.</span></p></li><li><p><span>Hypothalamus: A small structure located below the thalamus that is essential for maintaining homeostasis by regulating body temperature, hunger, thirst, sleep, and hormone release.</span></p></li><li><p><span>Basal Ganglia: A group of interconnected nuclei that include the caudate nucleus, putamen, globus pallidus, substantia nigra, and subthalamic nucleus. The basal ganglia are involved in motor control, learning, reward processing, and some aspects of cognition and emotion.</span></p></li><li><p><span>Cerebellum: Located at the base of the brain, the cerebellum is responsible for motor control, coordination, balance, and the fine-tuning of movements. It is also involved in some cognitive functions, such as attention and language processing.</span></p></li><li><p><span>Brainstem: The brainstem connects the brain to the spinal cord and is composed of three main structures: the midbrain, pons, and medulla oblongata. The brainstem controls essential functions such as heart rate, breathing, and blood pressure, as well as coordinating eye movements and relaying sensory information between the spinal cord and the brain.</span></p></li></ol><p><span>These major components of the brain are interconnected through a vast network of neurons and communicate through various pathways, allowing the brain to perform its diverse and complex functions. Understanding the structure and organization of the brain is essential for studying the neural mechanisms underlying human behavior, cognition, and emotion.</span></p><h3><a name="ventricles-and-cerebrospinal-fluid-csf" class="md-header-anchor"></a><span>Ventricles and cerebrospinal fluid (CSF)</span></h3><p><span>Ventricles are interconnected cavities within the brain filled with cerebrospinal fluid (CSF). They are part of the ventricular system, which plays crucial roles in maintaining the brain&#39;s homeostasis and protecting it from mechanical injury. There are four primary ventricles in the brain:</span></p><ol start='' ><li><span>Lateral ventricles (First and Second ventricles): These are a pair of large, C-shaped cavities, with one located in each cerebral hemisphere. The lateral ventricles are the largest of the ventricles and have multiple extensions, or horns, that reach into various regions of the brain. They produce a significant amount of CSF.</span></li><li><span>Third ventricle: The third ventricle is a narrow, midline cavity located in the diencephalon, between the left and right thalamus. It connects to the lateral ventricles through the interventricular foramen (or foramen of Monro). The third ventricle is responsible for circulating CSF produced by the lateral ventricles.</span></li><li><span>Fourth ventricle: The fourth ventricle is located between the brainstem (pons and medulla) and the cerebellum. It is connected to the third ventricle through the cerebral aqueduct (or aqueduct of Sylvius). The fourth ventricle narrows at its lower end to form the central canal, which extends into the spinal cord. CSF from the fourth ventricle flows into the subarachnoid space surrounding the brain and spinal cord, providing cushioning and buoyancy to these structures.</span></li></ol><p><span>Cerebrospinal fluid (CSF) is produced primarily by specialized structures called choroid plexuses, which are located within the ventricles. CSF plays several vital roles, including:</span></p><ol start='' ><li><span>Mechanical protection: CSF acts as a cushion, providing a protective buffer between the brain and the skull, reducing the impact of head injuries.</span></li><li><span>Buoyancy: The buoyancy provided by CSF helps support the brain&#39;s weight, preventing it from compressing its own blood vessels or other delicate structures.</span></li><li><span>Nutrient transport: CSF helps transport nutrients, such as glucose and essential ions, to the brain and spinal cord, ensuring proper functioning.</span></li><li><span>Waste removal: CSF facilitates the removal of waste products and metabolic byproducts from the brain, maintaining a healthy environment for brain cells.</span></li></ol><p><span>Understanding the structure and function of the ventricular system is essential for studying various neurological conditions, such as hydrocephalus, which involves an abnormal buildup of CSF in the ventricles.</span></p><h3><a name="fold-gyrus-sulcus-folium" class="md-header-anchor"></a><span>Fold, gyrus, sulcus, folium</span></h3><p><span>fold: /foʊld/, </span><em><span>plural</span></em><span> folds: /foʊldz/.</span></p><p><span>Folium: /ˈfoʊliəm/, </span><em><span>plural</span></em><span> folia: /ˈfoʊliə/. </span></p><p><span>gyrus: /ˈdʒaɪrəs/, </span><em><span>plural</span></em><span> gyri: /ˈdʒaɪraɪ/.</span></p><p><span>sulcus: /ˈsʌlkəs/, </span><em><span>plural</span></em><span> sulci: /ˈsʌlsaɪ/.</span></p><p><span>These terms are related to the convoluted structure of the brain, particularly the cerebral cortex and the cerebellum:</span></p><ol start='' ><li><span>Fold: A fold refers to </span><strong><span>the raised ridges or convolutions on the surface of the brain</span></strong><span>. These folds increase the surface area of the brain, allowing for more neurons to be packed into a limited space and facilitating complex cognitive functions. In the context of the cerebral cortex, these folds are called gyri. So, </span><strong><span>the word &quot;fold&quot; generally refers to the raised ridges on the brain&#39;s surface, which are closely related to &quot;gyri&quot;</span></strong><span>.</span></li><li><span>Folium: A folium is a term specifically used to describe </span><strong><span>the folds or leaf-like structures in the cerebellum</span></strong><span>. The cerebellum is organized into a series of folia that form the ten lobules (I-X) in each cerebellar hemisphere. These folia increase the surface area of the cerebellum, similar to how gyri increase the surface area of the cerebral cortex.</span></li><li><span>Gyrus: A gyrus (plural: gyri) is </span><strong><span>a ridge or a raised fold on the surface of the cerebral cortex</span></strong><span>. The cerebral cortex is composed of a highly convoluted surface with a series of gyri and sulci. Each gyrus is associated with specific functional areas, such as motor control, sensory processing, language, memory, and higher cognitive functions like decision-making and problem-solving.</span></li><li><span>Sulcus: A sulcus (plural: sulci) is </span><strong><span>a groove or depression between the gyri in the cerebral cortex</span></strong><span>. Sulci separate neighboring gyri and help define the boundaries of different functional areas or lobes in the brain. Some sulci are particularly prominent and consistent across individuals, allowing neuroscientists to identify and study different regions of the brain based on their anatomical landmarks.</span></li></ol><p><span>Overall, these terms describe the complex folding pattern of the brain&#39;s surface, which is essential for accommodating the high number of neurons required for advanced cognitive functions.</span></p><h3><a name="what-are-dendrite-targeting-interneurons-what-are-soma-targeting-interneurons" class="md-header-anchor"></a><span>What are dendrite-targeting interneurons? What are soma-targeting interneurons?</span></h3><p><span>Dendrite-targeting interneurons are a type of interneuron (a type of neuron that serves as a connection between other neurons) that target the dendrites of other neurons. Dendrites are the branching processes of a neuron that receive input from other neurons and transmit this input to the cell body, or soma, of the neuron. Dendrite-targeting interneurons release neurotransmitters onto the dendrites of other neurons, which can modulate the activity of those neurons.</span></p><p><span>Soma-targeting interneurons are also a type of interneuron, but they target the soma (cell body) of other neurons instead of the dendrites. These interneurons release neurotransmitters onto the soma of other neurons, which can also modulate the activity of those neurons.</span></p><p><span>Both dendrite-targeting and soma-targeting interneurons play important roles in the function of the nervous system, and they are involved in a variety of physiological processes, including learning and memory, emotion, and movement.</span></p><h3><a name="whar-does-v1-mean-in-neuroscience" class="md-header-anchor"></a><span>Whar does V1 mean in neuroscience?</span></h3><p><span>In neuroscience, V1 stands for primary visual cortex, also known as area V1 or the striate cortex. It is the first area of the brain to process visual information in the cerebral cortex. V1 receives input from the retina of the eye and is responsible for early processing of visual stimuli, such as edge detection, color processing, and basic form recognition.</span></p><p><span>V1 is located in the occipital lobe of the brain, which is the part of the cortex that is responsible for processing visual information. The occipital lobe is located at the back of the head, and V1 is located in the posterior portion of the lobe.</span></p><p><span>V1 is a critical area of the brain for vision and is involved in many visual functions, including visual attention, perception, and visual memory. Dysfunction or damage to V1 can lead to visual impairments or deficits in visual processing.</span></p><h3><a name="what-are-pyramidal-neurons" class="md-header-anchor"></a><span>What are pyramidal neurons?</span></h3><p><span>Pyramidal neurons are </span><strong><span>a type of excitatory neuron</span></strong><span> primarily found in the cerebral cortex and hippocampus of the mammalian brain. They play a crucial role in information processing, transmission, and integration within and between brain regions. The name &quot;pyramidal&quot; comes from </span><strong><span>their characteristic pyramid-shaped cell body</span></strong><span>.</span></p><p><span>Pyramidal neurons are the most common type of excitatory neuron in the mammalian cerebral cortex. Pyramidal neurons make up approximately 70-80% of the neurons in the cortex.</span></p><p><span>Some key features of pyramidal neurons include:</span></p><ol start='' ><li><span>Structure: Pyramidal neurons have a pyramid-shaped cell body with a single, long apical dendrite extending towards the surface of the cortex, and several shorter basal dendrites extending laterally. </span><strong><span>They also have a single, long axon that can project to distant brain regions</span></strong><span>.</span></li><li><span>Function: Pyramidal neurons are excitatory neurons, meaning they release excitatory neurotransmitters, such as glutamate, which increase the likelihood of generating an action potential in the target neurons. </span><strong><span>They play a crucial role in information processing and transmission within and between brain regions</span></strong><span>.</span></li><li><span>Connectivity: Pyramidal neurons form connections with other pyramidal neurons, as well as with interneurons. They can </span><strong><span>project both locally within the cortex and to distant regions</span></strong><span>, such as other cortical areas, subcortical structures, or even the spinal cord. </span><strong><span>This long-range connectivity allows them to facilitate communication and integration of information across different brain areas</span></strong><span>.</span></li></ol><p><span>In summary, pyramidal neurons are a major type of excitatory neuron found in the mammalian brain, particularly in the cerebral cortex and hippocampus. They have a unique structure and function that enable them to play a critical role in </span><strong><span>information processing and communication</span></strong><span> within the central nervous system.</span></p><h3><a name="what-is-the-visual-area-mt" class="md-header-anchor"></a><span>What is the visual area MT?</span></h3><p><span>The full name of MT is the middle temporal area (it is also sometimes referred to as V5 or area MT+). The Visual area MT (also known as V5 or area MT+), is a region of the brain that is involved in the processing of visual motion. It is located in the occipital lobe, which is the part of the cerebral cortex that is responsible for processing visual information. MT is connected to the retina of the eye and receives input from other areas of the brain that are involved in visual processing, such as V1 (primary visual cortex).</span></p><p><span>MT is thought to play a key role in the perception of motion and the ability to track moving objects. It is also involved in the computation of the direction and speed of moving stimuli, as well as the integration of visual and vestibular (balance and orientation) information. Dysfunction or damage to MT can lead to impairments in the perception of motion and other visual deficits.</span></p><h3><a name="what-does-temporal-mean" class="md-header-anchor"></a><span>What does &quot;temporal&quot; mean?</span></h3><p><span>The word &quot;temporal&quot; refers to the temples (the sides of the head) or the temples of the skull, as well as to the temporal region of the brain. In neuroscience, the term &quot;temporal&quot; is often used to refer to the temporal lobe, which is one of the four lobes of the cerebral cortex (the others are the frontal lobe, parietal lobe, and occipital lobe). The temporal lobe is located on the sides of the brain, above the ears.</span></p><p><span>The temporal lobe is involved in a variety of functions, including hearing, language, memory, and emotion. It contains a number of important brain structures, including the hippocampus, which is involved in memory formation, and the amygdala, which is involved in the processing of emotions. Dysfunction or damage to the temporal lobe can lead to a variety of neurological and psychiatric disorders, including memory problems and changes in mood and behavior.</span></p><h3><a name="mt-is-not-in-the-temporal-lobe-but-in-the-occipital-lobe" class="md-header-anchor"></a><span>MT is not in the temporal lobe but in the occipital lobe?</span></h3><p><span>That&#39;s correct! MT, which stands for middle temporal area, is a region of the brain that is involved in the processing of visual motion. It is located in the occipital lobe, which is the part of the cerebral cortex that is responsible for processing visual information. The occipital lobe is located at the back of the head, while the temporal lobe is located on the sides of the brain, above the ears.</span></p><h3><a name="what-are-they-cells-expressing-parvalbumin-pv-somatostatin-som-or-sst-and-the-serotonin-receptor-5ht3a-5ht3ar" class="md-header-anchor"></a><span>What are they: cells expressing parvalbumin (PV), somatostatin (SOM or SST), and the serotonin receptor 5HT3a (5HT3aR)？</span></h3><p><strong><span>Cells expressing parvalbumin (PV), somatostatin (SOM or SST), and the serotonin receptor 5HT3a (5HT3aR) are types of inhibitory interneurons in the brain</span></strong><span>. Inhibitory interneurons play a crucial role in regulating the balance of excitation and inhibition in neural circuits, which is essential for proper information processing, learning, and memory.</span></p><ul><li><span>Parvalbumin (PV) interneurons: PV-expressing interneurons are a subpopulation of GABAergic (inhibitory) interneurons that are characterized by their expression of the calcium-binding protein parvalbumin. They are known for their fast-spiking properties and primarily target the cell bodies and proximal dendrites of excitatory neurons, providing strong inhibitory control over their output. PV interneurons are involved in various functions, such as regulating the critical period for plasticity, controlling the timing of neural activity, and shaping the selectivity of sensory responses.</span></li><li><span>Somatostatin (SOM or SST) interneurons: SST-expressing interneurons are another subpopulation of GABAergic interneurons that express the neuropeptide somatostatin. These interneurons generally have slower firing rates than PV interneurons and target the distal dendrites of excitatory neurons, modulating the integration of excitatory inputs. SST interneurons are involved in regulating the strength of synaptic connections, controlling the gain of neural responses, and mediating cross-modal interactions.</span></li><li><span>5HT3a receptor-expressing interneurons: These GABAergic interneurons express the serotonin receptor 5HT3a (5HT3aR). They represent a diverse group of interneurons with various morphological and functional properties. One subpopulation of 5HT3aR-expressing interneurons are the vasoactive intestinal peptide (VIP)-expressing interneurons, which target other inhibitory interneurons and can disinhibit the activity of excitatory neurons. This subpopulation plays a role in attention, sensory gating, and cortical state transitions.</span></li></ul><p><span>These interneuron subtypes are critical for maintaining the balance and proper functioning of neural circuits, and their dysfunction has been implicated in various neurological and psychiatric disorders, such as epilepsy, autism, and schizophrenia.</span></p><p><span>Note: &quot;GABAergic&quot; (/ˌɡæbəˈɜrʤɪk/) refers to neurons or synapses that use gamma-aminobutyric acid (GABA, /ˈɡæbə/) as their primary neurotransmitter. GABAergic interneurons are a diverse group of inhibitory neurons found throughout the brain. GABAergic interneurons are a diverse group of inhibitory neurons found throughout the brain.</span></p><p><span>Note: Parvalbumin (PV) is a calcium-binding protein ( not a neurotransmitter) that serves several important functions in PV-expressing interneurons:</span></p><ol start='' ><li><span>Calcium buffering: As a calcium-binding protein, PV can bind to and sequester free calcium ions (Ca2+) within the neuron&#39;s cytoplasm. This helps regulate the concentration of intracellular calcium and contributes to the fast-spiking properties of PV interneurons. By buffering calcium, PV modulates the neuron&#39;s excitability, the release of neurotransmitters, and the activation of intracellular signaling pathways.</span></li><li><span>Fast-spiking properties: PV interneurons are known for their fast-spiking properties, which allow them to fire action potentials at high frequencies with little adaptation. The presence of parvalbumin in these cells contributes to their ability to maintain this high-frequency firing by buffering calcium, as mentioned above.</span></li><li><span>Regulation of synaptic plasticity: PV interneurons play a crucial role in regulating the critical period for synaptic plasticity in various brain regions. During these critical periods, neural circuits are highly sensitive to experience-dependent changes. PV interneurons contribute to the regulation of this plasticity, and parvalbumin is thought to play a role in this process by modulating the neuron&#39;s electrophysiological properties and the release of neurotransmitters.</span></li></ol><p><span>In summary, parvalbumin serves as a calcium-binding protein in PV interneurons, contributing to their unique electrophysiological properties, fast-spiking characteristics, and involvement in the regulation of synaptic plasticity.</span></p><p><span>Note: Somatostatin (SOM or SST) is a peptide hormone and neuropeptide that has multiple functions in the body and the brain. In the context of the brain, somatostatin is expressed by a subpopulation of inhibitory GABAergic interneurons, known as SOM interneurons. Here are some of the roles somatostatin plays in the brain:</span></p><ol start='' ><li><span>Inhibition of neurotransmitter release: Somatostatin can act as an inhibitory neuromodulator by binding to somatostatin receptors on the target neurons. This binding can suppress the release of various neurotransmitters, including glutamate, GABA, and dopamine, depending on the target neuron.</span></li><li><span>Regulation of neural activity: SOM interneurons primarily target the distal dendrites of excitatory neurons, modulating the integration of excitatory inputs. By releasing GABA and modulating the activity of their target neurons, they help control the gain of neural responses and shape the activity of neural circuits.</span></li><li><span>Synaptic plasticity: SOM interneurons are involved in regulating the strength of synaptic connections, which is an essential process for learning and memory. They can influence long-term potentiation (LTP) and long-term depression (LTD), which are cellular mechanisms underlying synaptic plasticity.</span></li><li><span>Cross-modal interactions: SOM interneurons have been implicated in mediating interactions between different sensory modalities, such as vision and touch. They play a role in integrating and processing sensory information from different sources.</span></li><li><span>Regulation of sleep and circadian rhythms: Somatostatin is involved in the regulation of sleep and circadian rhythms. It can influence the activity of neurons in the hypothalamus and other brain regions that control sleep-wake cycles.</span></li></ol><p><span>In summary, somatostatin has multiple functions in the brain, including modulating neurotransmitter release, regulating neural activity, shaping synaptic plasticity, mediating cross-modal interactions, and influencing sleep and circadian rhythms.</span></p><p><span>Note: The 5HT3a receptor is a subtype of the 5-HT3 (serotonin type 3) receptor, which is a ligand-gated ion channel primarily activated by serotonin (5-hydroxytryptamine, or 5-HT). The 5HT3a receptor is predominantly expressed in the central nervous system (CNS) and peripheral nervous system (PNS) and has various functions:</span></p><ol start='' ><li><span>Modulation of neurotransmitter release: Activation of 5HT3a receptors can stimulate the release of other neurotransmitters such as dopamine, GABA, and glutamate, depending on the location and type of neuron.</span></li><li><span>Regulation of neural circuits: 5HT3a receptors are expressed in a subpopulation of GABAergic interneurons, which play a role in modulating the activity of neural circuits. These interneurons help to balance excitation and inhibition in the brain.</span></li><li><span>Sensory processing: 5HT3a receptors are involved in the processing of sensory information, particularly in the context of pain and nociception. In the spinal cord, activation of these receptors can modulate pain signals transmitted to the brain.</span></li><li><span>Gastrointestinal function: In the peripheral nervous system, 5HT3a receptors are found in the enteric nervous system, which regulates gastrointestinal function. They play a role in modulating motility, secretion, and the perception of visceral pain.</span></li><li><span>Emesis (vomiting) and nausea: Activation of 5HT3a receptors in the brainstem and the gastrointestinal tract can trigger emesis (vomiting) and nausea, particularly in response to certain drugs, toxins, or radiation therapy.</span></li><li><span>Mood and anxiety: 5HT3a receptors have been implicated in the regulation of mood and anxiety. Antagonists of these receptors have been shown to have anxiolytic effects in animal models and human studies.</span></li></ol><p><span>In summary, the 5HT3a receptor is involved in various functions in the central and peripheral nervous systems, including the modulation of neurotransmitter release, regulation of neural circuits, sensory processing, gastrointestinal function, emesis, and the regulation of mood and anxiety.</span></p><h3><a name="what-are-sst-positive-neurons" class="md-header-anchor"></a><span>What are SST-positive neurons?</span></h3><p><span>SST-positive neurons refers to nerve cells (neurons) that express the gene for somatostatin (SST) and produce the somatostatin peptide hormone. These neurons are found in various regions of the brain and in other parts of the body, including the hypothalamus and the gut.</span></p><p><span>In the hypothalamus, SST-positive neurons are found in several nuclei, such as the periventricular nucleus, the arcuate nucleus and the dorsal hypothalamic area. These neurons play a critical role in regulating hormone secretion, hunger and satiety, stress response, and other physiological functions.</span></p><p><span>In the gut, SST-positive neurons are found in the enteric nervous system (ENS) and can modulate the release of other hormones and neurotransmitters, regulate gastrointestinal motility, and control the secretions of digestive enzymes and fluids.</span></p><p><span>SST-positive neurons can be identified by immunohistochemistry, which is a technique that uses antibodies that specifically bind to SST protein and allows the visualization of these cells. This method is commonly used in research to study the distribution and functions of SST-positive neurons in the brain and other parts of the body.</span></p><h3><a name="what-is-a-peptide" class="md-header-anchor"></a><span>What is a peptide?</span></h3><p><span>A chemical compound that is made of a small chain of two or more amino acids</span></p><p><span>肽是两个或两个以上氨基酸以肽链相连的化合物，是介于大分子蛋白质和小分子氨基酸之间的一段最具活性、最易吸收、最能激发人体再生系统的功能性营养。肽是构成人体内酶、激素、抗体、神经间质等活性物质不可替代的材料，是生命之源。肽具有原蛋白质和单体氨基酸不具备的独特的生理活性和医疗保健作用，具备营养、保健、治疗三重功能。</span></p><h3><a name="what-are-the-epicycle-and-deferent" class="md-header-anchor"></a><span>What are the epicycle and deferent?</span></h3><p><span>epicycle: (in the Ptolemaic system) a small circle, around which a planet was thought to revolve, whose centre describes a larger circle (the </span><strong><span>deferent</span></strong><span>) centred on the earth (托勒密体系)本轮</span></p><p><span>deferent: (in the Ptolemaic system) a circle centred on the earth around which the centre of the epicycle was thought to move (托勒密体系)均轮; 以地球为中心的一个圆，本轮中心绕此圆移动</span></p><p><span>本轮和均轮模拟出的椭圆-对应论文第9页最上面的一句话</span></p><p><img src="./imgs/本轮和均轮模拟出的椭圆-对应论文第9页最上面的一句话.jpg" referrerpolicy="no-referrer" alt="Diagram"></p></div>
+</body>
+</html>

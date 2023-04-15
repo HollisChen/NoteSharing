@@ -62,6 +62,8 @@ Some key features of interneurons include:
 
 In summary, interneurons are a diverse class of neurons that play a crucial role in modulating and regulating the activity of neural circuits within the central nervous system. They are involved in local information processing and integration, and contribute to the overall balance of excitation and inhibition within neural circuits.
 
+see [What are PV, SOM, 5HT3a?](#What-are-they:-cells-expressing-parvalbumin-(PV),-somatostatin-(SOM-or-SST),-and-the-serotonin-receptor-5HT3a-(5HT3aR)？).
+
 ### An overview of the major components of the brain
 
 The human brain is a complex and highly organized structure composed of various interconnected regions that work together to support a wide range of cognitive, motor, and emotional functions. Here's an overview of the major components of the brain:
@@ -176,7 +178,7 @@ That's correct! MT, which stands for middle temporal area, is a region of the br
 
 ### What are they: cells expressing parvalbumin (PV), somatostatin (SOM or SST), and the serotonin receptor 5HT3a (5HT3aR)？
 
-Cells expressing parvalbumin (PV), somatostatin (SOM or SST), and the serotonin receptor 5HT3a (5HT3aR) are types of inhibitory interneurons in the brain. Inhibitory interneurons play a crucial role in regulating the balance of excitation and inhibition in neural circuits, which is essential for proper information processing, learning, and memory.
+**Cells expressing parvalbumin (PV), somatostatin (SOM or SST), and the serotonin receptor 5HT3a (5HT3aR) are types of inhibitory interneurons in the brain**. Inhibitory interneurons play a crucial role in regulating the balance of excitation and inhibition in neural circuits, which is essential for proper information processing, learning, and memory.
 
 - Parvalbumin (PV) interneurons: PV-expressing interneurons are a subpopulation of GABAergic (inhibitory) interneurons that are characterized by their expression of the calcium-binding protein parvalbumin. They are known for their fast-spiking properties and primarily target the cell bodies and proximal dendrites of excitatory neurons, providing strong inhibitory control over their output. PV interneurons are involved in various functions, such as regulating the critical period for plasticity, controlling the timing of neural activity, and shaping the selectivity of sensory responses.
 
