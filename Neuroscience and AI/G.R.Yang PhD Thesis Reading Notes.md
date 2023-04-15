@@ -180,9 +180,13 @@ That's correct! MT, which stands for middle temporal area, is a region of the br
 
 **Cells expressing parvalbumin (PV), somatostatin (SOM or SST), and the serotonin receptor 5HT3a (5HT3aR) are types of inhibitory interneurons in the brain**. Inhibitory interneurons play a crucial role in regulating the balance of excitation and inhibition in neural circuits, which is essential for proper information processing, learning, and memory.
 
-- Parvalbumin (PV) interneurons: PV-expressing interneurons are a subpopulation of GABAergic (inhibitory) interneurons that are characterized by their expression of the calcium-binding protein parvalbumin. They are known for their fast-spiking properties and primarily target the cell bodies and proximal dendrites of excitatory neurons, providing strong inhibitory control over their output. PV interneurons are involved in various functions, such as regulating the critical period for plasticity, controlling the timing of neural activity, and shaping the selectivity of sensory responses.
+Note: Interneurons are a broad class of neurons found throughout the central nervous system that play a crucial role in regulating and integrating neural activity within local circuits. Cortical interneurons are a subset of interneurons specifically found in the cerebral cortex. 
 
-- Somatostatin (SOM or SST) interneurons: SST-expressing interneurons are another subpopulation of GABAergic interneurons that express the neuropeptide somatostatin. These interneurons generally have slower firing rates than PV interneurons and target the distal dendrites of excitatory neurons, modulating the integration of excitatory inputs. SST interneurons are involved in regulating the strength of synaptic connections, controlling the gain of neural responses, and mediating cross-modal interactions.
+The following three interneurons are all cortical interneurons.
+
+- Parvalbumin (PV) interneurons: PV-expressing interneurons are a subpopulation of GABAergic (inhibitory) interneurons that are characterized by their expression of the calcium-binding protein parvalbumin. **They are known for their fast-spiking properties and primarily target the cell bodies and proximal dendrites (somatic areas) of excitatory neurons, providing strong inhibitory control over their output**. PV interneurons are involved in various functions, such as regulating the critical period for plasticity, controlling the timing of neural activity, and shaping the selectivity of sensory responses.
+
+- Somatostatin (SOM or SST) interneurons: SST-expressing interneurons are another subpopulation of GABAergic interneurons that express the neuropeptide somatostatin. These interneurons generally **have slower firing rates than PV interneurons and target the distal dendrites of excitatory neurons, modulating the integration of excitatory inputs**. SST interneurons are involved in regulating the strength of synaptic connections, controlling the gain of neural responses, and mediating cross-modal interactions.
 
 - 5HT3a receptor-expressing interneurons: These GABAergic interneurons express the serotonin receptor 5HT3a (5HT3aR). They represent a diverse group of interneurons with various morphological and functional properties. One subpopulation of 5HT3aR-expressing interneurons are the vasoactive intestinal peptide (VIP)-expressing interneurons, which target other inhibitory interneurons and can disinhibit the activity of excitatory neurons. This subpopulation plays a role in attention, sensory gating, and cortical state transitions.
 
@@ -221,13 +225,15 @@ In summary, the 5HT3a receptor is involved in various functions in the central a
 
 ### What are SST-positive neurons?
 
-SST-positive neurons refers to nerve cells (neurons) that express the gene for somatostatin (SST) and produce the somatostatin peptide hormone. These neurons are found in various regions of the brain and in other parts of the body, including the hypothalamus and the gut.
+SST-positive (SST+) neurons refers to neurons that express the gene for somatostatin (SST) and produce the somatostatin peptide hormone.
 
-In the hypothalamus, SST-positive neurons are found in several nuclei, such as the periventricular nucleus, the arcuate nucleus and the dorsal hypothalamic area. These neurons play a critical role in regulating hormone secretion, hunger and satiety, stress response, and other physiological functions.
+SST-positive neurons, also known as somatostatin-expressing (SOM or SST) interneurons, are a specific subtype of inhibitory interneurons found in the brain. These neurons are characterized by their expression of somatostatin, a neuropeptide that acts as an inhibitory neurotransmitter.
 
-In the gut, SST-positive neurons are found in the enteric nervous system (ENS) and can modulate the release of other hormones and neurotransmitters, regulate gastrointestinal motility, and control the secretions of digestive enzymes and fluids.
+SST-positive neurons are a subtype of GABAergic interneurons, meaning they release gamma-aminobutyric acid (GABA) as their main inhibitory neurotransmitter. They are primarily found in the cerebral cortex and play essential roles in regulating neural activity within cortical circuits.
 
-SST-positive neurons can be identified by immunohistochemistry, which is a technique that uses antibodies that specifically bind to SST protein and allows the visualization of these cells. This method is commonly used in research to study the distribution and functions of SST-positive neurons in the brain and other parts of the body.
+SST-positive interneurons mainly target the dendrites of pyramidal neurons, which allows them to modulate the integration of excitatory inputs from other neurons. By targeting dendrites, they help control the processing of incoming signals and prevent excessive activation of the target neurons. They are also involved in synaptic plasticity, which is essential for learning and memory.
+
+In summary, SST-positive neurons are inhibitory neurons in the brain that express somatostatin and play important roles in regulating neural activity within cortical circuits.
 
 ### What is a peptide?
 
