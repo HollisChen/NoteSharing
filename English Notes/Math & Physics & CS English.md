@@ -70,7 +70,7 @@
 
 - functional *n.* /ˈfʌŋkʃən(ə)l/ [C] 泛函 Originally: a function that has other functions as its argument. In later use also: a function that maps elements of a vector space to elements of the scalar field of that space.
 
-- modulus *n.* /ˈmɑːdʒələs/ [C] 模数 a number used as a divisorfor considering numbers insets, numbers beingconsidered congruent whengiving the same remainderwhen divided by a particularmodulus (Oxford Dictionary);  the number (as a positiveinteger) or othermathematical entity (as apolynomial) in acongruence that dividesthe difference of the two congruent members without leaving a remainder (Merriam-Webster).
+- modulus *n.* /ˈmɑːdʒələs/ [C] 模数 a number used as a divisor for considering numbers insets, numbers being considered congruent when giving the same remainder when divided by a particular modulus (Oxford Dictionary);  the number (as a positiveinteger) or other mathematical entity (as a polynomial) in a congruence that divides the difference of the two congruent members without leaving a remainder (Merriam-Webster).
 
 - residue *n.* /ˈrezɪduː/ 余数 the remainder after subtracting a multiple of a modulus from an integer or a power of the integer that can appear as the second of the two terms in an appropriate congruence (Merriam-Webster); A number congruent to a given whole number modulo a second whole number (the modulus); a number left as a remainder when the first number is divided by the second (Oxford Dictionary).
 
