@@ -4,9 +4,9 @@ The following are Neuroscience Notes:
 
 [Models of the Neuron Learning Notes](https://hollischen.github.io/NoteSharing/Models%20of%20the%20Neuron%20Class%20Notes/Models%20of%20the%20Neuron%20Learning%20Notes)
 
-[Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model.html)
-
 [Models of the Neuron hand-written notes](https://hollischen.github.io/NoteSharing/Models%20of%20the%20Neuron%20Class%20Notes/Models%20of%20the%20Neuron%20hand-written%20notes.pdf)
+
+[Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Mcculloch-Pitts-Model_Hebbian-Learning_Hopfield-Model.html)
 
 [ICV_SunBurst](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/ICV_Plots/ICV_SunBurst.html)
 
