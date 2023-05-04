@@ -190,7 +190,7 @@ Here, explain the meanings of the terms "first-order", "linear", "homogeneous", 
 
 $\dfrac{dy}{dx} + P(x) y = Q(x)$ is a first-order differential equation. Note: "Order" in differential equations refers to the degree (order) of the derivative, which is the number of times a function has been differentiated.
 
-**Homogeneous**: There are two different meanings of "homogeneous" for differential equations -- one is for first-order differential equations and the other is for linear differential equations. References are [Wikipedia](https://en.wikipedia.org/wiki/Homogeneous_differential_equation) and [Wolfram Mathworld](https://mathworld.wolfram.com/HomogeneousOrdinaryDifferentialEquation.html).
+**Homogeneous**: There are **two entirely different meanings of "homogeneous" for differential equations** -- one is for first-order differential equations and the other is for linear differential equations. References are [Wikipedia](https://en.wikipedia.org/wiki/Homogeneous_differential_equation) and [Wolfram Mathworld](https://mathworld.wolfram.com/HomogeneousOrdinaryDifferentialEquation.html).
 
 1. **Homogeneous first-order differential equations**
    A first-order ordinary differential equation in the form:
