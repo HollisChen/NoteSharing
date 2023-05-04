@@ -180,6 +180,71 @@ In the case of a spatial random field, the index set may be a subset of Euclidea
 
 Random fields are useful for modeling and analyzing complex data that have a spatial or temporal structure, such as climate data, geostatistical data, and image data. They are also used in machine learning and artificial intelligence applications such as image and signal processing, where the input data is often structured as a random field.
 
+## Calculus
+
+### Differential equations
+
+Here, explain the meanings of the terms "first-order", "linear", "homogeneous", "ordinary" in the context of differential equations.
+
+**First-order**: this refers to the highest derivative order present in the differential equation. A first-order differential equation contains only the first derivative of the dependent variable with respect to the independent variable. In general, a differential equation of order n contains the n-th derivative of the dependent variable. For example, the equation
+
+$\dfrac{dy}{dx} + P(x) y = Q(x)$ is a first-order differential equation. Note: "Order" in differential equations refers to the degree (order) of the derivative, which is the number of times a function has been differentiated.
+
+**Homogeneous**: There are two different meanings of "homogeneous" for differential equations -- one is for first-order differential equations and the other is for linear differential equations. References are [Wikipedia](https://en.wikipedia.org/wiki/Homogeneous_differential_equation) and [Wolfram Mathworld](https://mathworld.wolfram.com/HomogeneousOrdinaryDifferentialEquation.html).
+
+1. **Homogeneous first-order differential equations**
+   A first-order ordinary differential equation in the form:
+   $$
+   M(x, y) d x+N(x, y) d y=0
+   $$
+   
+   is a homogeneous type if both functions  $M(x, y)$  and $N(x, y)$  are homogeneous functions of the same degree  $n$.  That is, multiplying each variable by a parameter  $\lambda$ , we find $M(\lambda x, \lambda y)=\lambda^{n} M(x, y)$ and $N(\lambda x, \lambda y)=\lambda^{n} N(x, y)$.
+   
+   Thus,
+   
+   $$
+   \frac{M(\lambda x, \lambda y)}{N(\lambda x, \lambda y)}=\frac{M(x, y)}{N(x, y)}
+   $$
+
+2. **Homogeneous linear differential equations**
+   
+   A linear differential equation is homogeneous if it is a homogeneous linear equation in the unknown function and its derivatives. It follows that, if $φ(x)$ is a solution, so is $cφ(x)$, for any (non-zero) constant $c$. In order for this condition to hold, each nonzero term of the linear differential equation must depend on the unknown function or any derivative of it. A linear differential equation that fails this condition is called inhomogeneous.
+   
+   A linear differential equation can be represented as a linear operator acting on  $y(x)$  where  $x$  is usually the independent variable and  $y$  is the dependent variable. Therefore, the general form of a linear homogeneous differential equation is
+   
+   $$
+   L(y)=0
+   $$
+   
+   where  $L$  is a differential operator, a sum of derivatives (defining the "0th derivative" as the original, non-differentiated function), each multiplied by a function  $f_{i}$  of  $x$  :
+   
+   $$
+   L=\sum_{i=0}^{n} f_{i}(x) \frac{d^{i}}{d x^{i}}
+   $$
+   
+   where  $f_{i}$  may be constants, but not all  $f_{i}$  may be zero.
+   
+   For example, the following linear differential equation is homogeneous:
+   
+   $$
+   \sin (x) \frac{d^{2} y}{d x^{2}}+4 \frac{d y}{d x}+y=0
+   $$
+   
+   whereas the following two are inhomogeneous:
+   
+   $$
+   \begin{align*}
+   & 2 x^{2} \frac{d^{2} y}{d x^{2}}+4 x \frac{d y}{d x}+y=\cos (x) \\
+   & 2 x^{2} \frac{d^{2} y}{d x^{2}}-3 x \frac{d y}{d x}+y=2
+   \end{align*}
+   $$
+   
+   The existence of a constant term is a sufficient condition for an equation to be inhomogeneous, as in the above example.
+
+**Linear**: this refers to the linearity (coefficients can be a function of independent variable $x$) of the equation with respect to the dependent variable (function $y$, which is the 0th derivative) and its derivatives (e.g., first derivative, second derivative). See the explanation in "**Homogeneous linear differential equations**".
+
+**Ordinary**: In mathematics, an ordinary differential equation (ODE) is a differential equation dependent on only a single independent variable. As with other DE, its unknown(s) consists of one (or more) function(s) and involves the derivatives of those functions. The term "ordinary" is used in contrast with partial differential equations (PDEs) which may be with respect to more than one independent variable.
+
 ## Topology
 
 ### Manifold
