@@ -12,6 +12,8 @@ The following are Neuroscience Notes:
 
 [ICV_SankeyDiagram](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/ICV_Plots/ICV_SankeyDiagram.html)
 
+[Journals in Computational Neuroscience](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Journals%20in%20Computational%20Neuroscience)
+
 The following are AI Notes:
 
 [AI Academic Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/AI%20Academic%20Notes)
