@@ -48,7 +48,7 @@ In summary, proprioception, interoception, and exteroception are distinct types 
 
 ### What are interneurons?
 
-Interneurons, also known as local circuit neurons or intrinsic neurons, are a diverse class of neurons that play a critical role in **modulating and regulating the activity of neural circuits within the central nervous system (CNS)**, particularly in the brain and spinal cord. They are primarily involved in **processing and integrating information locally within a specific brain region or neural circuit**, rather than transmitting information over long distances between different brain regions (pyramidal neurons are primarily responsible for this).
+Interneurons, also known as local circuit neurons or intrinsic neurons, are a diverse class of neurons that play a critical role in **modulating and regulating the activity of neural circuits within the central nervous system (CNS)**, particularly in the brain and spinal cord. They are primarily involved in **processing and integrating information locally within a specific brain region or neural circuit** (interneurons typically have short axons and make connections within the same brain region), rather than transmitting information over long distances between different brain regions (pyramidal neurons are primarily responsible for this).
 
 Some key features of interneurons include:
 
@@ -63,6 +63,10 @@ Some key features of interneurons include:
 In summary, interneurons are a diverse class of neurons that play a crucial role in modulating and regulating the activity of neural circuits within the central nervous system. They are involved in local information processing and integration, and contribute to the overall balance of excitation and inhibition within neural circuits.
 
 see [What are PV, SOM, 5HT3a?](#What-are-they:-cells-expressing-parvalbumin-(PV),-somatostatin-(SOM-or-SST),-and-the-serotonin-receptor-5HT3a-(5HT3aR)？).
+
+amino acid /əˈminoʊ ˈæsɪd/
+
+aminobutyric acid /ˌæmɪnoʊbjuːˈtɪrɪk ˈæsɪd/
 
 ### An overview of the major components of the brain
 
@@ -148,9 +152,11 @@ V1 is a critical area of the brain for vision and is involved in many visual fun
 
 ### What are pyramidal neurons?
 
+pyramidal /pəˈræmədəl/ pyramid /ˈpɪrəmɪd/
+
 Pyramidal neurons are **a type of excitatory neuron** primarily found in the cerebral cortex and hippocampus of the mammalian brain. They play a crucial role in information processing, transmission, and integration within and between brain regions. The name "pyramidal" comes from **their characteristic pyramid-shaped cell body**.
 
-Pyramidal neurons are the most common type of excitatory neuron in the mammalian cerebral cortex. Pyramidal neurons make up approximately 70-80% of the neurons in the cortex.
+Pyramidal neurons are the most common type of excitatory neuron in the mammalian cerebral cortex. Pyramidal neurons make up **approximately 70-80%** of the neurons in the cortex.
 
 Some key features of pyramidal neurons include:
 
@@ -182,15 +188,23 @@ That's correct! MT, which stands for middle temporal area, is a region of the br
 
 Note: Interneurons are a broad class of neurons found throughout the central nervous system that play a crucial role in regulating and integrating neural activity within local circuits. Cortical interneurons are a subset of interneurons specifically found in the cerebral cortex. 
 
-The following three interneurons are all cortical interneurons.
+The following three interneurons are all cortical interneurons (*cortical interneurons, as a first-order approximation, can be classified into **three largely non-overlapping groups**: cells expressing parvalbumin (PV), somatostatin (SOM or SST), and the serotonin receptor 5HT3a (5HT3aR)*).
 
-- Parvalbumin (PV) interneurons: PV-expressing interneurons are a subpopulation of GABAergic (inhibitory) interneurons that are characterized by their expression of the calcium-binding protein parvalbumin. **They are known for their fast-spiking properties and primarily target the cell bodies and proximal dendrites (somatic areas) of excitatory neurons, providing strong inhibitory control over their output**. PV interneurons are involved in various functions, such as regulating the critical period for plasticity, controlling the timing of neural activity, and shaping the selectivity of sensory responses.
+- Parvalbumin (PV) interneurons: PV-expressing interneurons are a subpopulation of GABAergic (inhibitory) interneurons that are characterized by their expression of the calcium-binding protein parvalbumin. **They are known for their fast-spiking properties and primarily target the cell bodies and proximal dendrites (somatic areas) of excitatory neurons, providing strong inhibitory control over their output** (**PV-expressing interneurons specifically target the perisomatic area of pyramidal neurons**). PV interneurons are involved in various functions, such as regulating the critical period for plasticity, controlling the timing of neural activity, and shaping the selectivity of sensory responses.
+
+  Note: Somatic areas (same as soma) refer to the cell body (soma), so accurately speaking PV neurons target perisomatic area, which refers to the soma (cell body) of the neuron as well as the region immediately surrounding the cell body (soma) of the neuron,  including the initial segment of the axon and the proximal dendrites that are close to the soma and proximal dendrites. Say more clearly: the perisomatic area comprises the cell body, proximal dendrites and the axon initial segment.
 
 - Somatostatin (SOM or SST) interneurons: SST-expressing interneurons are another subpopulation of GABAergic interneurons that express the neuropeptide somatostatin. These interneurons generally **have slower firing rates than PV interneurons and target the distal dendrites of excitatory neurons, modulating the integration of excitatory inputs**. SST interneurons are involved in regulating the strength of synaptic connections, controlling the gain of neural responses, and mediating cross-modal interactions.
 
-- 5HT3a receptor-expressing interneurons: These GABAergic interneurons express the serotonin receptor 5HT3a (5HT3aR). They represent a diverse group of interneurons with various morphological and functional properties. One subpopulation of 5HT3aR-expressing interneurons are the vasoactive intestinal peptide (VIP)-expressing interneurons, which target other inhibitory interneurons and can disinhibit the activity of excitatory neurons. This subpopulation plays a role in attention, sensory gating, and cortical state transitions.
+- 5HT3a receptor-expressing interneurons (5HT3aR-expressing interneurons): These GABAergic interneurons express the serotonin receptor 5HT3a (5HT3aR). They represent a diverse group of interneurons with various morphological and functional properties. One subpopulation of 5HT3aR-expressing interneurons are the **vasoactive intestinal peptide (VIP)-expressing interneurons** **(VIP neurons)**, which **target other inhibitory interneurons (such as SST neurons) and can disinhibit the activity of excitatory neurons** (**disinhibition**). This subpopulation plays a role in attention, sensory gating, and cortical state transitions.  
 
-These interneuron subtypes are critical for maintaining the balance and proper functioning of neural circuits, and their dysfunction has been implicated in various neurological and psychiatric disorders, such as epilepsy, autism, and schizophrenia.
+  Note: VIP was initially discovered in the intestines, which is why it has "intestinal" in its name, but it is also present in the central and peripheral nervous systems. Note: VIP and 5HT3a (serotonin receptor 5HT3a) are different types of molecules: VIP is a neuropeptide that acts as a neurotransmitter and neuromodulator. In contrast, 5HT3a is a receptor protein that binds to serotonin, a different neurotransmitter. In this case, the VIP neurons are a specific group of interneurons that both express the serotonin receptor 5HT3a and produce VIP.
+
+  Note: VIP interneurons primarily (specifically) target and inhibit SOM (SST) interneurons, which leads to disinhibition of pyramidal neurons. While their main targets are indeed SST interneurons, VIP interneurons can also target other inhibitory interneurons, such as PV neurons, in some cases. However, the preference for targeting SST interneurons is a defining characteristic of VIP interneurons.
+
+Note: VIP (vasoactive intestinal peptide) is a neuropeptide that can function as a neurotransmitter, but PV (parvalbumin) and SST (somatostatin) are proteins that serve as markers for specific types of interneurons. They are all proteins or peptides that serve as molecular markers to identify and classify specific subpopulations of neurons. However, these neurons do release neurotransmitters, such as GABA for PV neurons, but the markers themselves usually are not neurotransmitters (here only VIP can be a neurotransmitter).
+
+Note: PV, SST, and VIP neurons are classified based on the specific proteins or peptides they release. PV neurons release parvalbumin, SST neurons release somatostatin, and VIP neurons release vasoactive intestinal peptide. However, 5HT3aR-expressing interneurons are classified based on the expression of 5HT3a receptors on their cell membrane, rather than releasing a specific neurotransmitter. These 5HT3a receptors can bind to serotonin, and their presence helps to define this particular group of interneurons.
 
 Note: "GABAergic" (/ˌɡæbəˈɜrʤɪk/) refers to neurons or synapses that use gamma-aminobutyric acid (GABA, /ˈɡæbə/) as their primary neurotransmitter. GABAergic interneurons are a diverse group of inhibitory neurons found throughout the brain. GABAergic interneurons are a diverse group of inhibitory neurons found throughout the brain.
 
@@ -250,3 +264,29 @@ deferent: (in the Ptolemaic system) a circle centred on the earth around which t
 本轮和均轮模拟出的椭圆-对应论文第9页最上面的一句话
 
 ![Diagram](./imgs/本轮和均轮模拟出的椭圆-对应论文第9页最上面的一句话.jpg)
+
+### What is serial two-photon tomography?
+
+Serial two-photon tomography (STPT) is an advanced imaging technique used to acquire high-resolution, three-dimensional images of biological specimens, such as brain tissue. It combines two-photon microscopy with serial sectioning of the tissue to generate a comprehensive, volumetric dataset of the entire sample.
+
+Two-photon microscopy is a fluorescence imaging method that uses a two-photon absorption process to excite fluorophores in the sample. This process allows for deep tissue penetration, reduced photobleaching, and minimal phototoxicity, making it ideal for imaging thick specimens.
+
+In serial two-photon tomography, the specimen is mounted in a tissue-clearing medium and imaged using a two-photon microscope. The microscope scans the tissue in a raster pattern, capturing a series of high-resolution images at different depths (z-stacks). After imaging a section, the tissue is sectioned, and the next layer is imaged. This process is repeated until the entire specimen has been imaged, creating a series of image stacks.
+
+These image stacks are then computationally aligned and reconstructed into a single, three-dimensional volume. This final dataset can be analyzed to visualize and quantify cellular structures, neuronal connections, and molecular markers throughout the specimen.
+
+Serial two-photon tomography has been used in various fields of research, including neuroscience, developmental biology, and cancer research. In neuroscience, for example, it has been employed to generate brain-wide maps of neuronal connections and distributions, contributing to our understanding of the organization and function of the brain.
+
+In two-photon microscopy, the term "two" refers to the simultaneous absorption of two photons by a fluorophore to excite it. This process is different from conventional single-photon fluorescence microscopy, where a single photon is absorbed to excite a fluorophore.
+
+In two-photon microscopy, the excitation light source is an infrared laser that emits photons with approximately half the energy required for single-photon excitation. When two of these low-energy photons are absorbed by a fluorophore simultaneously, they provide the necessary energy for excitation, resulting in the emission of a fluorescence signal. The probability of this simultaneous absorption occurring is low, so it mainly happens at the focal point of the laser, where the photon density is the highest.
+
+The use of two-photon excitation provides several advantages over single-photon excitation:
+
+1. Deeper tissue penetration: Infrared light used in two-photon microscopy is less scattered and absorbed by biological tissues compared to the visible light used in single-photon microscopy. This allows for imaging deeper into the tissue.
+
+2. Reduced photobleaching and phototoxicity: Since two-photon excitation occurs mainly at the focal point of the laser, there is less out-of-focus excitation, leading to reduced photobleaching and phototoxicity in the surrounding tissue.
+
+3. Better spatial resolution: The nonlinear nature of two-photon excitation results in a smaller excitation volume, which provides better spatial resolution in the axial (z) direction.
+
+These advantages make two-photon microscopy particularly well-suited for imaging thick specimens, such as brain tissue, and for studying dynamic processes in living organisms.
