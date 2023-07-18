@@ -42,7 +42,7 @@ print(10.1 % 2)  ## modulo
 
 In Python, objects can be classified as mutable or immutable based on whether their value can be changed after they are created.
 
-Mutable objects can be modified after they are created. Examples of mutable objects include lists, dictionaries, and sets. When you modify a mutable object, any variable that references that object will see the changes.
+Mutable objects can be modified after they are created. Examples of mutable objects include lists, dictionaries, NumPy arrays, and sets. When you modify a mutable object, any variable that references that object will see the changes.
 
 Immutable objects cannot be modified after they are created. Examples of immutable objects include integers, floats, booleans, and tuples. When you modify an immutable object, a new object is created in memory with the new value.
 
@@ -63,6 +63,33 @@ print(y)
 ```
 [10, 20]
 [21, 20]
+```
+
+Here is an example of NumPy arrays.
+
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+y = arr
+
+arr = arr.astype(float)
+arr[1:4] = [20, 30, 40]
+
+print(arr)
+print(y)
+```
+
+```
+[ 1. 20. 30. 40.  5.]
+[1 2 3 4 5]
+```
+
+We can see that `y` doesn't change along with `arr`, because `arr = arr.astype(float)` returns an array `arr` separate from  and independent of original `arr`. But if removing `arr = arr.astype(float)`, then `y` changes along with `arr`, and the output becomes:
+
+```
+[ 1 20 30 40  5]
+[ 1 20 30 40  5]
 ```
 
 Things like numbers and strings are immutable. Notice that changing `y` does not change `x`.
