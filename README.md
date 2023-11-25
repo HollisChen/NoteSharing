@@ -54,6 +54,8 @@ The following are English Notes:
 
 [Food English](https://hollischen.github.io/NoteSharing/English%20Notes/Food%20English)
 
+[Pronunciation-Intonation-Stress in English](https://hollischen.github.io/NoteSharing/English%20Notes/Pronunciation-Intonation-Stress%20in%20English)
+
 The following are Blogs:
 
 [Efficiency from Wechat](https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1550412738877816833&__biz=MzI0NDU0OTIxOA==#wechat_redirect)
