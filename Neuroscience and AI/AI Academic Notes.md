@@ -105,7 +105,9 @@ Supplementary Notes:
 
 "inductive" vs "deductive", see the picture below.
 
-![inductive vs deductive](https://www.netlanguages.com/blog/wp-content/uploads/2017/06/diagram.jpg)
+![inductive vs deductive](./pics/inductive-deductive.jpg)
+
+(image source: https://www.netlanguages.com/blog/wp-content/uploads/2017/06/diagram.jpg)
 
 Note: I think Transductive learning and Inductive learning are rarely mentioned, maybe their difference is not obvious enough, or this difference is downplayed?
 
@@ -121,9 +123,9 @@ Support Vector Machines (SVMs) are supervised learning models for a problem wher
 
    When the data is not linearly separable then we can use Non-Linear SVM, which means when the data points cannot be separated into 2 classes by using a straight line (if 2D) then we use some advanced techniques like kernel tricks to classify them. In most real-world applications we do not find linearly separable data points hence we use "kernel trick" (introduced later) to solve them.
 
+![SVM Margin](./pics/svm.png)
 
-
-![SVM Margin](https://editor.analyticsvidhya.com/uploads/567891.png)
+(image source: https://editor.analyticsvidhya.com/uploads/567891.png)
 
 Margin is a important concept in SVM, which is the distance between the hyperplane and the observations closest to the hyperplane (support vectors). In SVM, a large margin is considered a good margin. There are two types of margins: the hard margin and the soft margin.
 
@@ -160,5 +162,63 @@ In optimization algorithms, first-order and second-order moments are often used 
 2. Second-order moment: The second-order moment is the exponentially weighted moving average of the squared historical gradients. The second-order moment captures the magnitude information of the gradient. In the optimization process, the second-order moment helps to adaptively adjust the learning rate, applying different update sizes on different parameters. The second-order moment is commonly used in AdaGrad, RMSProp, and Adam optimizers.
 
 In practice, combining first-order and second-order moments can improve the optimization process. For example, the Adam optimizer combines both the first-order and second-order moments to achieve adaptive learning rate adjustment and better optimization results.
+
+### $L_1$, $L_2$, $L_p$, $L_∞$ norms and regularizations
+
+**What is Norm?**
+
+In simple words, the norm is a quantity that describes the size of a vector, something that we can represent using a set of numbers as you might already know that in machine learning everything is represented in terms of vectors. In this norm, all the components of the vector are weighted equally.
+
+**$L_0$ norm**
+
+It is actually not a norm (See the conditions a norm must satisfy [*here*](https://en.wikipedia.org/wiki/Norm_(mathematics)#Definition:~:text=.%5B4%5D-,Definition,-%5Bedit%5D); L0 norm doesn't satisfy the [absolute homogeneity](https://en.wikipedia.org/wiki/Norm_(mathematics)#Definition:~:text=Absolute%20homogeneity)). Corresponds to the total number of nonzero elements in a vector. For example, the L0 norm of the vectors (0,0) and (0,2) is 1 because there is only one nonzero element.
+
+L0 norm is computationally hard and prone to overfitting. People use the L1 norm as a preferred choice in practice because it is easier to optimize and promotes sparsity effectively.
+
+**$L_1$ norm (Taxicab norm or Manhattan norm; derived distance: Manhattan distance)**
+
+$\|\boldsymbol{x}\|_{1} := \sum_{i=1}^n |x_i|$
+
+**$L_2$ norm (Euclidean norm; derived distance: Euclidean distance)**
+
+$\|\boldsymbol{x}\|_{2} := \sqrt{\sum_{i=1}^n x_i^2}$
+
+**$L_p$ norm (p-norm)**
+
+$\|\boldsymbol{x}\|_{p} := \left(\sum_{i=1}^n |x_i|^p\right)^{\frac{1}{p}}$
+
+**$L_∞$ norm (maximum norm, uniform norm, or supremum norm)**
+
+$\|\boldsymbol{x}\|_{\infty}:=\lim\limits_{p \mapsto \infty}\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{\frac{1}{p}}$ 
+
+$\|\boldsymbol{x}\|_{\infty}:=\max _{1 \leq j \leq n}\left\{\left|x_{1}\right|, \left|x_{2}\right|, \ldots, \left|x_{n}\right|\right\}$
+
+$L_{\infty}$ measures the maximum absolute value of a vector component. The set of vectors whose infinity norm is a given constant, $c$, forms the surface of a **hypercube** with edge length $2c$.
+
+![Lp norm](./pics/Lp_norm_1.jpg)
+
+![Lp norm](./pics/Lp_norm_2.jpg)
+
+**$L_1$ regularization (Lasso regression)**
+
+L1 regularization adds the sum of the absolute values of the weights (parameters) of the model to the loss function. The L1 regularization term encourages sparsity by driving some of the weights to become exactly zero -- this happens because the L1 norm has "sharp corners" at zero (see pictures). This property makes L1 regularization useful for feature selection, as it indicates which features are more important. See pictures below for why using $L_1$ norm shape to touch the solution surface will very likely to find a touch point on a spike tip and thus a sparse solution.
+
+The term "lasso" in Lasso Regression is an acronym for "Least Absolute Shrinkage and Selection Operator."
+
+**$L_2$ regularization (ridge regression)**
+
+L2 regularization adds the sum of the squared values of the weights to the loss function. The L2 regularization term encourages smaller weight values without driving them to zero. It penalizes large weights more strongly than L1 regularization and helps prevent overfitting by discouraging the model from relying too heavily on any single feature. The L2 regularization term promotes smoothness in the weight values and can improve the model's robustness to noise in the training data. See the pictures below to compare $L_1$ and $L_2$ regularizations.
+
+The term "ridge" in Ridge Regression reflects the geometric interpretation of the regularization term, which shapes the error surface into a ridge-like structure and encourages the weights to be more evenly spread out.
+
+**$L_∞$ regularization (max norm regularization)**
+
+$L_∞$ regularization encourages stability and robustness by preventing any individual coefficient from becoming too large. This helps to control the impact of individual parameters and promotes stability in the model. It is useful when there is a need to restrict extreme parameter values and prevent them from dominating the model's behavior.
+
+The figures below are the geometric perspective on sparsity and the $L_1$ norm and $L_2$ norm.
+
+![parameter_and_norm](./pics/parameter_and_norm.png)
+
+![L1L2_Animation](./pics/L1L2_Animation.gif)
 
 ## Views
