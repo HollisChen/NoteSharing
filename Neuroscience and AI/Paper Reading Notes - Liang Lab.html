@@ -1,0 +1,555 @@
+<!doctype html>
+<html style='font-size:20px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Paper Reading Notes - Liang Lab</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+
+/*!
+Misty Light
+Brought to you with ❤️ by E-Tiger Studio, 2017-2020
+https://github.com/etigerstudio/typora-misty-theme
+ */
+:root {
+  --control-text-color: #777;
+  --side-bar-bg-color: #f6f8fa
+}
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: subpixel-antialiased
+}
+body {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #24292e;
+  line-height: 1.5
+}
+#write {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 30px 100px
+}
+#write > ol:first-child,
+#write > ul:first-child {
+  margin-top: 30px
+}
+body > :first-child {
+  margin-top: 0!important
+}
+body > :last-child {
+  margin-bottom: 0!important
+}
+a {
+  color: #4183c4
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  cursor: text;
+  color: #142331
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+  text-decoration: none
+}
+h1 code,
+h1 tt,
+h2 code,
+h2 tt,
+h3 code,
+h3 tt,
+h4 code,
+h4 tt,
+h5 code,
+h5 tt,
+h6 code,
+h6 tt {
+  font-size: inherit
+}
+h1 {
+  text-align: center;
+  padding-bottom: .3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  margin: 1em auto 1.2em
+}
+h1:after {
+  border-bottom: 2px dashed #afec9e;
+  content: '';
+  width: 100px;
+  display: block;
+  margin: .2em auto 0;
+  height: 2px
+}
+h2 {
+  font-size: 1.75em;
+  padding-left: 9px;
+  line-height: 1.4;
+  border-left: 6px solid #cce5ff
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43
+}
+h3:before {
+  border-radius: 50%;
+  background-color: #9ed0ff;
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 6px;
+  vertical-align: middle;
+  margin-bottom: .18em;
+  margin-right: 8px
+}
+#write > h3.md-focus:before,
+#write > h4.md-focus:before {
+  background-color: transparent;
+  width: auto;
+  height: auto
+}
+h4 {
+  font-size: 1.25em
+}
+h4:before {
+  background-color: #9ed0ff;
+  content: '';
+  width: 6px;
+  display: inline-block;
+  height: 2px;
+  vertical-align: middle;
+  margin-bottom: .18em;
+  margin-right: 8px
+}
+h5 {
+  font-size: 1em
+}
+h6 {
+  font-size: 1em;
+  color: #777
+}
+blockquote,
+dl,
+ol,
+p,
+table,
+ul {
+  margin: .8em 0
+}
+li > ol,
+li > ul {
+  margin: 0
+}
+hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0
+}
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6,
+body>h1:first-child,
+body>h1:first-child+h2,
+body>h2:first-child,
+body>h3:first-child,
+body>h4:first-child,
+body>h5:first-child,
+body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0
+}
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+  margin-top: 0
+}
+li p.first {
+  display: inline-block
+}
+ol,
+ul {
+  padding-left: 30px
+}
+ol:first-child,
+ul:first-child {
+  margin-top: 0
+}
+ol:last-child,
+ul:last-child {
+  margin-bottom: 0
+}
+blockquote {
+  border-left: 4px dotted #e5e8e8;
+  padding: 0 12px;
+  color: #444;
+  font-size: .9em
+}
+blockquote blockquote {
+  padding-right: 0
+}
+table {
+  padding: 0;
+  word-break: initial
+}
+table tr {
+  border-top: 1px solid #dadfe6;
+  margin: 0;
+  padding: 0
+}
+table.md-table tr:nth-child(2n) {
+  background-color: #fafbfc
+}
+table tr td,
+table tr th {
+  border: 1px solid #dadfe6;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px
+}
+table tr td:first-child,
+table tr th:first-child {
+  margin-top: 0
+}
+table tr td:last-child,
+table tr th:last-child {
+  margin-bottom: 0
+}
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd
+}
+.md-fences,
+code,
+tt {
+  font-size: 90%;
+  border-radius: 3px;
+  font-family: "SF Mono",Consolas,"Liberation Mono",Menlo,Courier,monospace
+}
+code,
+tt {
+  margin: 0 2px;
+  padding: 2px 4px;
+  background-color: #e2f0ff
+}
+.md-fences {
+  background-color: #f6f8fa;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 12px 1em
+}
+.md-task-list-item > input {
+  margin-left: -1.45em;
+  margin-top: calc(1em - 10px)
+}
+#write pre.md-meta-block {
+  padding: 1rem;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7faf6;
+  border: 0;
+  border-radius: 3px;
+  color: #777;
+  margin-top: 0!important
+}
+.mathjax-block > .code-tooltip {
+  bottom: .375rem
+}
+#write > h3.md-focus:before {
+  left: -1.5625rem;
+  top: .375rem
+}
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before {
+  left: -1.5625rem;
+  top: .285714286rem
+}
+.md-image > .md-meta {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "SF Mono",Consolas,"Liberation Mono",Courier,monospace;
+  padding: 2px 4px 0;
+  font-size: .9em;
+  color: inherit
+}
+.md-tag {
+  color: inherit
+}
+.md-toc {
+  margin-top: 20px;
+  padding-bottom: 20px
+}
+.sidebar-tabs {
+  border-bottom: none
+}
+#typora-quick-open {
+  border: 1px solid #ddd;
+  background-color: #f8f8f8
+}
+#typora-quick-open-item {
+  background-color: #fafafa;
+  border-color: #fefefe #e5e5e5 #e5e5e5 #eee;
+  border-style: solid;
+  border-width: 1px
+}
+.typora-quick-open-item {
+  padding-top: 3px
+}
+.typora-quick-open-list {
+  margin-top: 4px
+}
+.typora-quick-open-item-path {
+  margin-top: -2px
+}
+#md-notification:before {
+  top: 10px
+}
+.on-focus-mode blockquote {
+  border-left-color: rgba(85,85,85,.12)
+}
+.context-menu,
+.megamenu-content,
+footer,
+header {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+  visibility: visible
+}
+.mac-seamless-mode #typora-sidebar {
+  background-color: var(--side-bar-bg-color)
+}
+.md-lang {
+  color: #b4654d
+}
+.pin-outline #outline-content .outline-active strong,
+.pin-outline .outline-active {
+  color: #232323;
+  font-weight: 600
+}
+.outline-label {
+  color: #646464;
+  font-weight: 400
+}
+.file-list-item-summary {
+  font-family: "SF UI Text",-apple-system,-apple-system-body,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+@media print {
+  body {
+    font-weight: 400
+  }
+  b,
+  strong {
+    font-weight: 600
+  }
+  pre,
+  table {
+    page-break-inside: avoid
+  }
+  pre {
+    word-wrap: break-word
+  }
+}
+body {
+  font-weight: 400;
+  -webkit-font-smoothing: unset
+}
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 600
+}
+h1,
+table tr th {
+  font-weight: 400
+}
+.file-list-item-file-name {
+  font-weight: 500
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="paper-reading-notes---liang-lab" class="md-header-anchor"></a><span>Paper Reading Notes - Liang Lab</span></h1><p><img src=".\pics\Neuron.png" referrerpolicy="no-referrer" alt="Neuron"></p><h2><a name="basic-knowledge" class="md-header-anchor"></a><span>Basic knowledge</span></h2><h4><a name="amacrine-cells-horizontal-cells-bipolar-cells" class="md-header-anchor"></a><span>Amacrine cells, horizontal cells, bipolar cells</span></h4><p><span>Amacrine cells, horizontal cells, and bipolar cells are three types of interneurons found in the retina of the eye. These cells play important roles in visual processing and contribute to the transmission of visual information from photoreceptor cells (rods and cones) to retinal ganglion cells.</span></p><ol start='' ><li><span>Amacrine Cells: Amacrine cells are interneurons found in the inner nuclear layer of the retina. They are responsible for lateral processing and modulation of visual signals. Amacrine cells receive input from bipolar cells and provide inhibitory or excitatory signals to other bipolar cells, ganglion cells, or other amacrine cells. They help in adjusting contrast, detecting motion, and enhancing specific visual features.</span></li><li><span>Horizontal Cells: Horizontal cells are another type of interneuron located in the outer plexiform layer of the retina. They receive input from photoreceptor cells (rods and cones) and provide inhibitory feedback to modulate the activity of these cells. Horizontal cells facilitate lateral inhibition, which enhances contrast and sharpens the perception of edges in the visual scene. They also play a role in adjusting the sensitivity of photoreceptor cells to different levels of light.</span></li><li><span>Bipolar Cells: Bipolar cells are interneurons located in the inner nuclear layer of the retina, between the photoreceptor cells and ganglion cells. They transmit visual signals from photoreceptor cells to retinal ganglion cells. Bipolar cells receive input from photoreceptor cells (rods and cones) and, based on the type of bipolar cell, can convey information about light intensity, color, or specific spatial features. Different types of bipolar cells have distinct receptive field properties and contribute to various aspects of visual processing.</span></li></ol><p><span>Together, amacrine cells, horizontal cells, and bipolar cells play crucial roles in shaping visual signals within the retina. They contribute to processes such as contrast enhancement, lateral inhibition, spatial filtering, and the modulation of visual information before it is transmitted to the retinal ganglion cells and further processed in the visual pathway.</span></p><h4><a name="motif" class="md-header-anchor"></a><span>Motif</span></h4><p><span>In neuroscience, a motif is a recurring pattern of connectivity between neurons.</span></p><h4><a name="axonal-bouton" class="md-header-anchor"></a><span>Axonal bouton</span></h4><p><span>An axonal bouton, also known as a synaptic bouton or axon terminal, is a specialized structure located at the end of an axon. It is involved in transmitting signals to other neurons or target cells in the form of chemical or electrical signals. Axonal boutons are the sites of synapses, which are connections between neurons where information is exchanged. Refer to </span><a href='https://synapseweb.clm.utexas.edu/axons'><span>here</span></a><span>.</span></p><h4><a name="temple-颞" class="md-header-anchor"></a><span>Temple (颞)</span></h4><p><span>Each of the flat parts at the sides of the head, at the same level as the eyes and higher. 指</span><strong><span>头颅两侧靠近耳朵的部分</span></strong><span>。</span></p><p><span>temporal adj.</span></p><h4><a name="projection-neurons-vs-interneurons" class="md-header-anchor"></a><span>Projection neurons vs interneurons</span></h4><p><span>Projection neurons and interneurons are two distinct types of neurons based on their roles and connectivity within neural circuits.</span></p><ol start='' ><li><span>Projection Neurons: Projection neurons, also known as output neurons or efferent neurons, are responsible for sending signals from one region of the nervous system to another. These neurons receive input from other neurons, process the information, and transmit it to distant target areas. Projection neurons typically have long axons that extend over long distances to reach their target regions. Examples of projection neurons include retinal ganglion cells, which transmit visual information from the retina to the brain, and pyramidal neurons in the cortex, which send signals to other brain regions.</span></li><li><span>Interneurons: Interneurons, also known as local circuit neurons or association neurons, are neurons that primarily communicate within a local region of the nervous system. They form connections with nearby neurons and participate in local processing, integration, and modulation of signals. Interneurons are responsible for coordinating the activity of different populations of neurons and mediating interactions between them. They are typically involved in information processing, integration of sensory inputs, and the regulation of neuronal activity within a specific circuit. Examples of interneurons include amacrine cells and horizontal cells in the retina, as well as inhibitory interneurons in the cortex.</span></li></ol><p><span>In summary, projection neurons are responsible for transmitting signals from one region of the nervous system to another, often over long distances, while interneurons facilitate local processing and communication within a specific circuit or region. Both types of neurons play crucial roles in information processing and communication within the nervous system, but they differ in their connectivity and functional roles within neural networks.</span></p><h4><a name="photoreceptor-cells-rods-and-cones" class="md-header-anchor"></a><span>Photoreceptor cells (rods and cones)</span></h4><p><span>Photoreceptor cells, including rods and cones, are specialized sensory cells in the retina of the eye. While they are not classified as neurons, they are considered as specialized cells that convert light energy into electrical signals, which are then transmitted to the neighboring retinal neurons, including bipolar cells and retinal ganglion cells.</span></p><p><span>Photoreceptor cells contain light-sensitive pigments that enable them to detect and respond to different wavelengths of light. Rods are responsible for vision in low-light conditions and are more sensitive to dim light, while cones are responsible for color vision and visual acuity in bright light.</span></p><p><span>When light strikes the photoreceptor cells, it triggers a cascade of biochemical reactions that lead to changes in the electrical potential of the cell membrane. These changes in electrical potential result in the release of neurotransmitters, such as glutamate, which then communicate with the interconnected neurons in the retina.</span></p><p><span>Although photoreceptor cells themselves are not classified as neurons, they play a critical role in the initial transduction of light into electrical signals, which are then transmitted through the retinal neural circuitry via synapses between photoreceptor cells, bipolar cells, and ultimately to the retinal ganglion cells. The electrical signals generated by photoreceptor cells initiate the processing of visual information that is ultimately transmitted to the brain for further analysis and perception.</span></p><h4><a name="chr2-channelrhodopsin-2-and-arch-archaerhodopsin" class="md-header-anchor"></a><span>ChR2 (Channelrhodopsin-2) and Arch (Archaerhodopsin)</span></h4><p><span>ChR2 (Channelrhodopsin-2) and Arch (Archaerhodopsin) are two types of optogenetic tools used in neuroscience research to manipulate the activity of neurons with light. Both ChR2 and Arch are light-sensitive proteins that are introduced into specific neurons through genetic modification, allowing researchers to control neuronal activity using light stimulation.</span></p><ol start='' ><li><span>ChR2 (Channelrhodopsin-2): ChR2 is a light-sensitive protein derived from green algae. When exposed to blue light, ChR2 allows the influx of positive ions (usually sodium or calcium) into the neuron, leading to depolarization of the cell membrane and triggering action potentials or neuronal firing. ChR2 is commonly used to activate neurons and study their function in real-time by precisely controlling their firing patterns.</span></li><li><span>Arch (Archaerhodopsin): Arch is a light-sensitive protein derived from archaea, which are single-celled microorganisms. When exposed to yellow or red light, Arch allows the influx of negative ions (usually chloride) into the neuron, leading to hyperpolarization of the cell membrane and inhibiting neuronal firing. Arch is commonly used to suppress or silence the activity of specific neurons in order to study their role in neural circuits and behavior.</span></li></ol><p><span>By using these optogenetic tools, neuroscientists can selectively activate or inhibit specific populations of neurons with precise spatial and temporal control. This allows for a deeper understanding of how neural circuits function and how they contribute to various physiological and behavioral processes.</span></p><h4><a name="chrimson-stimulation-and-gcamp-imaging" class="md-header-anchor"></a><span>ChRimson stimulation and GCaMP imaging</span></h4><p><span>The combination of ChRimson stimulation and GCaMP imaging is a popular experimental approach used in neuroscience research to study neuronal activity and circuit dynamics. Here&#39;s a brief explanation of each component:</span></p><ol start='' ><li><p><span>ChRimson stimulation: ChRimson is a genetically encoded protein known as a channelrhodopsin, which is sensitive to light. It can be selectively expressed in specific neurons or neuronal populations using genetic techniques. When activated by a specific wavelength of light (usually in the red spectrum), ChRimson allows for precise control of neuronal activation. By shining light onto the ChRimson-expressing neurons, researchers can evoke action potentials and study the effects of neuronal activation on circuit function.</span></p><p><span>The name &quot;ChRimson&quot; is a portmanteau combining &quot;channelrhodopsin&quot; (ChR) and &quot;crimson.&quot; Channelrhodopsins are a family of light-sensitive proteins derived from microbial organisms, commonly used in optogenetics to control the activity of neurons using light stimulation. ChRimson is a specific variant of channelrhodopsin that emits a red fluorescence when activated by light, hence the inclusion of &quot;crimson&quot; in its name.</span></p></li><li><p><span>GCaMP imaging: GCaMP is a genetically encoded calcium indicator protein that emits fluorescence in response to changes in intracellular calcium levels. Calcium ions play a crucial role in neuronal activity, and fluctuations in calcium levels are closely associated with neuronal firing and synaptic activity. By expressing GCaMP in neurons, researchers can monitor changes in calcium levels, which serve as a proxy for neuronal activity. GCaMP imaging allows for the visualization and quantification of neural responses in real-time and can provide insights into the dynamics of neural circuits. In &quot;GCaMP&quot;, &quot;G&quot; stands for &quot;green&quot;; &quot;Ca&quot; stands for &quot;calcium&quot;; &quot;MP&quot; portion stands for &quot;molecular probe&quot; or &quot;molecular indicator&quot;, which indicates that GCaMP is a genetically encoded protein that serves as a probe or indicator for calcium levels.</span></p></li></ol><p><span>When ChRimson stimulation is combined with GCaMP imaging, it enables researchers to both activate specific neurons and simultaneously monitor the resulting calcium responses in those neurons and potentially surrounding cells. ChRimson&#39;s distinct red fluorescence properties make it useful for experiments that involve simultaneous optogenetic stimulation and fluorescent imaging using red-light-sensitive indicators like GCaMP.</span></p><h4><a name="pmt" class="md-header-anchor"></a><span>PMT</span></h4><p><span>PMT stands for &quot;Photomultiplier Tube.&quot; It is a highly sensitive electronic device used for detecting and measuring light intensity in various scientific and technical applications, including neuroscience and optogenetics.</span></p><p><span>A PMT consists of a vacuum-sealed glass or metal enclosure that contains a series of dynodes and a photocathode. When photons strike the photocathode, they generate photoelectrons through the photoelectric effect. These photoelectrons are then accelerated and multiplied through a series of dynodes, producing an amplified electrical signal proportional to the intensity of the incident light.</span></p><p><span>PMTs are commonly used in fluorescence microscopy, where they are used to detect and quantify the fluorescence emitted by fluorophores in biological samples. In optogenetics, PMTs are often employed to measure the fluorescence signals emitted by genetically encoded calcium indicators (such as GCaMP) or other fluorescent reporters that monitor neuronal activity.</span></p><p><span>The high sensitivity and fast response time of PMTs make them well-suited for detecting low light levels and capturing rapid changes in fluorescence intensity. They are a valuable tool in many optical measurement systems, providing precise and reliable detection of light signals in various scientific disciplines.</span></p><h4><a name="cerebral-cortex" class="md-header-anchor"></a><span>Cerebral cortex</span></h4><p><span>The cerebral cortex mostly consists of the six-layered neocortex, with just 10% consisting of allocortex.</span></p><p><span>Six layers in neocortex:</span></p><ul><li><span>Molecular (plexiform) layer.</span></li><li><span>External granular layer.</span></li><li><span>External pyramidal layer.</span></li><li><span>Internal granular layer.</span></li><li><span>Internal pyramidal layer.</span></li><li><span>Multiform (fusiform) layer.</span></li></ul><h4><a name="perfusion-and-sectioning" class="md-header-anchor"></a><span>Perfusion and sectioning</span></h4><p><span>Perfusion and sectioning are typically procedures conducted after the death of an animal, usually a laboratory mouse or rat, in the context of neuroscience research.</span></p><ol start='' ><li><strong><span>Perfusion</span></strong><span>: Perfusion is a process of flushing out the blood from an animal&#39;s vascular system and replacing it with a fixative solution. This fixation process helps preserve the brain&#39;s structure and biochemical properties for further analysis. Perfusion is often done using a pump to push a fixative solution through the animal&#39;s circulatory system. The fixative solution usually contains chemicals that prevent cellular degradation, allowing researchers to study the brain&#39;s anatomy and molecular composition.</span></li><li><strong><span>Sectioning</span></strong><span>: Sectioning involves slicing the preserved brain into thin sections for examination under a microscope. These sections can be cut using specialized equipment, such as a microtome, which allows researchers to obtain precise slices. The thickness of the sections depends on the research objectives and the specific techniques being used. Once the brain is sliced, researchers can analyze different regions and layers to understand its structure and potentially study various features, like cell types, connectivity, and protein distribution.</span></li></ol><p><span>Both perfusion and sectioning are crucial steps in preparing brain tissue for further analysis in neuroscientific studies. They provide researchers with the means to investigate the brain&#39;s structure, function, and connectivity after the animal&#39;s death.</span></p><p><span>Note: Paraformaldehyde (PFA) is a commonly used fixative solution for perfusion in many neuroscience studies. PFA is a chemical compound that helps preserve tissue by cross-linking proteins and preventing their degradation. When used as a fixative, PFA stabilizes cellular structures, including neurons and their connections, allowing researchers to analyze the tissue&#39;s morphology, connectivity, and other characteristics.</span></p><p><span>During perfusion, PFA is often mixed with a buffer solution (such as phosphate-buffered saline) to create a perfusate. The perfusate is pumped into the circulatory system of the animal, effectively replacing the blood with the fixative solution. This process helps rapidly halt cellular activity and preserve the tissue&#39;s state at the time of perfusion.</span></p><p><span>After perfusion, the brain is usually removed from the animal and further processed, which may include additional fixation, sectioning, and staining steps depending on the specific experimental goals.</span></p><h4><a name="confocal-imaging-and-coregistration" class="md-header-anchor"></a><span>Confocal imaging and coregistration</span></h4><p><span>Confocal imaging is an advanced microscopy technique used to capture high-resolution, three-dimensional images of biological specimens. It provides better optical sectioning and reduces out-of-focus light, resulting in clearer and more detailed images compared to conventional widefield microscopy.</span></p><p><span>The core principle of confocal imaging involves using a pinhole aperture to block out-of-focus light, allowing only the light emitted from the focal plane of the specimen to pass through. This results in improved contrast and resolution, particularly in thick or densely labeled samples.</span></p><p><span>Confocal microscopes use lasers to illuminate the sample, and the emitted light is collected through a detector. By scanning the laser across the specimen and collecting the emitted light at different depths, a series of optical sections can be obtained. These sections can then be reconstructed into a three-dimensional image, providing insights into the spatial arrangement of structures within the specimen.</span></p><p><span>Confocal imaging is widely used in various fields of biology, including neuroscience, cell biology, developmental biology, and more, to study cellular structures, protein localization, and dynamic processes in living or fixed samples.</span></p><p><span>Coregistration, also known as image registration or image alignment, is a process used in various imaging techniques, including neuroimaging, to align two or more images of the same subject or scene. The goal of coregistration is to ensure that the images are spatially matched, allowing for accurate comparison, analysis, and integration of data from different sources or modalities.</span></p><p><span>In the context of neuroimaging, coregistration often refers to aligning images from different imaging modalities, such as MRI (structural) and PET or fMRI (functional), to precisely overlay the structural and functional information. This alignment enables researchers to accurately correlate brain activity with specific anatomical regions.</span></p><p><span>Coregistration involves identifying common landmarks or features present in both images and using mathematical algorithms to calculate the transformation needed to align them. This transformation includes translation, rotation, scaling, and distortion adjustments. The process aims to minimize differences between the images, optimizing the spatial correspondence between corresponding points or regions.</span></p><p><span>Coregistration is essential for many applications, such as:</span></p><ol start='' ><li><span>Combining structural and functional data in functional neuroimaging studies.</span></li><li><span>Integrating information from multiple imaging modalities to gain a comprehensive view of the subject.</span></li><li><span>Comparing images acquired at different time points or under different conditions.</span></li><li><span>Fusing data from different imaging techniques, such as combining MRI with histological data.</span></li></ol><p><span>Overall, coregistration enhances the accuracy and reliability of data analysis and interpretation by ensuring that the images being compared or integrated are accurately aligned in space.</span></p><h4><a name="pia-mater" class="md-header-anchor"></a><span>Pia mater</span></h4><p><span>The pia mater (often referred to as just &quot;pia&quot;) is a thin, delicate layer of connective tissue that is located on the surface of the cerebral cortex. It is the innermost layer of the three membranes (meninges), which are the protective membranes that cover the brain and spinal cord. It is a thin, delicate membrane that is closely adhered to the underlying nervous tissue. The pia mater is in direct contact with the brain tissue and follows the contours of the cerebral cortex, providing support and protection to the brain.</span></p><h4><a name="nmda-receptors-and-ampa-receptors" class="md-header-anchor"></a><span>NMDA receptors and AMPA receptors</span></h4><p><span>NMDA receptors and AMPA receptors are two major types of glutamate receptors that mediate excitatory synaptic transmission in the brain.</span></p><ol start='' ><li><strong><span>Activation</span></strong><span> </span></li></ol><ul><li><span>NMDA receptors require binding of both glutamate (the neurotransmitter) and a co-agonist (such as glycine or D-serine) to be fully activated (open the channel pore and allow cation influx). This requirement is often referred to as a &quot;coincidence detection&quot; mechanism. </span></li><li><span>AMPA receptors are activated by the neurotransmitter glutamate alone, without the need for additional co-agonists.</span></li></ul><ol start='2' ><li><strong><span>Ion Selectivity</span></strong></li></ol><ul><li><span>NMDA receptor activation leads to larger cation influx, especially of calcium ions (Ca2+).  NMDA receptors also allow the passage of sodium ions (Na+), and potassium ions (K+) when activated. NMDA receptors have a much higher permeability to Ca2+ compared to Na+ or K+.</span></li><li><span>AMPA receptors are primarily selective for sodium ions (Na+), meaning they allow a significant influx of sodium ions when activated by the neurotransmitter glutamate. While they do allow some passage of potassium ions (K+), the permeability for sodium is much higher compared to potassium. </span></li></ul><ol start='3' ><li><strong><span>Slow/Fast Kinetics</span></strong></li></ol><ul><li><span>NMDA receptors have a slower kinetic response, with channel openings in the range of 50-100 ms.</span></li><li><span>AMPA receptors have faster kinetics of around 1 ms.</span></li></ul><ol start='4' ><li><strong><span>Voltage Dependency/Independence</span></strong></li></ol><ul><li><span>NMDA receptors are voltage-dependent and require membrane depolarization (often provided by AMPA receptor activation first) to remove a magnesium (Mg2+) ion block from their ion channel. (Voltage Dependency)</span></li><li><span>AMPA receptors are not as voltage-dependent as NMDA receptors and can open at the resting membrane potential. (Voltage Independence)</span></li></ul><ol start='5' ><li><strong><span>Synaptic Plasticity</span></strong></li></ol><ul><li><span>NMDA receptors play key roles in synaptic plasticity, learning, and memory due to their calcium permeability and signaling. The large influx of calcium ions through NMDA receptors triggers a cascade of biochemical events (including changes in gene expression and the formation of new synaptic structures) within the neuron, contributing to processes, e.g., LTP, of synaptic plasticity. NMDA receptors are closely associated with </span><strong><span>the late phase of LTP</span></strong><span>, which involves more enduring changes in synaptic strength and structural modifications of synapses.</span></li><li><span>AMPA receptors mediate most of the fast excitatory synaptic transmission, and are involved in </span><strong><span>the early phase of LTP</span></strong><span> and are responsible for the initial strengthening of synapses.</span></li></ul><p><span>Besides, NMDA receptors contribute to the integration of synaptic inputs, particularly during strong synaptic activity and coincident firing. The GluN2 subunit composition affects NMDA receptor properties such as channel kinetics and magnesium sensitivity. AMPA receptors contain GluA2 subunits that govern calcium permeability.</span></p><p><span>Also, AMPA receptors are generally more numerous than NMDA receptors at most synapses due to their role in rapid synaptic transmission. For example, hippocampal CA1 synapses contain around 50 AMPA receptors vs. 20 NMDA receptors per synapse on average.</span></p><h4><a name="dorsal-vs-ventral-caudal-vs-rostral-medial-vs-lateral" class="md-header-anchor"></a><span>Dorsal vs ventral, caudal vs rostral, medial vs lateral</span></h4><p><span>In the context of neuron imaging, &quot;caudal,&quot; &quot;medial,&quot; and &quot;dorsal&quot; are terms used to describe different orientations or perspectives for viewing the brain or specific brain structures. These terms are commonly used in neuroscience to indicate different directions within the brain and its regions. Here&#39;s what each term means:</span></p><ol start='' ><li><strong><span>Caudal</span></strong><span> vs </span><strong><span>rostral</span></strong><span>: Caudal refers to the direction toward the tail end of an organism. In the context of brain imaging, caudal view means looking at the brain from a perspective where you are viewing structures that are located closer to the rear or tail end of the brain. It&#39;s the opposite of the &quot;rostral&quot; direction, which is towards the head.</span></li><li><strong><span>Medial</span></strong><span> vs </span><strong><span>lateral</span></strong><span>: Medial refers to the direction toward the midline of the body or brain. In neuron imaging, a medial view means you are looking at the brain from an angle where you can see structures that are located closer to the center or midline of the brain. It&#39;s the opposite of the &quot;lateral&quot; direction, which is away from the midline.</span></li><li><strong><span>Dorsal</span></strong><span> vs </span><strong><span>ventral</span></strong><span>: Dorsal refers to the direction toward the back or upper surface of an organism. In the context of brain imaging, a dorsal view means you are looking at the brain from an angle where you can see structures that are located towards the top or back of the brain. It&#39;s the opposite of the &quot;ventral&quot; direction, which is towards the belly or lower surface.</span></li></ol><h4><a name="retina-waves" class="md-header-anchor"></a><span>Retina waves</span></h4><p><span>In the context of neurobiology and the development of the visual system, a &quot;retina wave&quot; refers to a specific pattern of synchronized, spontaneous electrical activity that occurs in the developing retina of the eye. These waves of activity are often observed in animal models during early stages of retinal development, typically before the onset of vision.</span></p><p><span>Here are some key characteristics of retina waves:</span></p><ol start='' ><li><strong><span>Spontaneous Activity:</span></strong><span> Retina waves are spontaneous, rhythmic bursts of electrical activity that occur in the absence of visual stimulation. They are generated within the retina itself.</span></li><li><strong><span>Synchronized Activity:</span></strong><span> Retina waves often involve the synchronized firing of groups of retinal ganglion cells (RGCs) and other retinal neurons. These cells send signals to the brain via the optic nerve.</span></li><li><strong><span>Purpose:</span></strong><span> The exact purpose of retina waves is not fully understood, but they are believed to play a role in refining and organizing the neural circuitry in the developing visual system. They may be involved in establishing connections between retinal cells and in the development of receptive fields in the visual cortex.</span></li><li><strong><span>Critical Period:</span></strong><span> Retina waves are typically observed during a critical period in early development. As the visual system matures, spontaneous retinal activity gradually decreases and is replaced by visual responses to external stimuli.</span></li><li><strong><span>Experimental Tool:</span></strong><span> Retina waves are used as a valuable tool in neuroscience research. They provide insights into how the visual system wires itself during development, and they can be manipulated and studied to understand the principles of neural circuit formation.</span></li></ol><p><span>Overall, retina waves are an important phenomenon in the study of visual system development and have contributed to our understanding of how the nervous system establishes functional connections during early stages of life.</span></p><h4><a name="membrane-time-constant-and-synaptic-time-constant" class="md-header-anchor"></a><span>Membrane time constant and synaptic time constant </span></h4><p><span>The membrane time constant and synaptic time constant are important concepts in neuroscience that relate to the dynamics of neuronal communication and the behavior of individual neurons.</span></p><ol start='' ><li><p><span>Membrane Time Constant:</span></p><ul><li><span>The membrane time constant (often denoted as τ_m) represents the time it takes for the membrane potential of a neuron to reach approximately 63.2% of its final value after a step change in current. It&#39;s a measure of how quickly a neuron&#39;s membrane potential responds to input.</span></li><li><span>This time constant is determined by the membrane resistance (R_m) and the membrane capacitance (C_m) of the neuron and is given by the formula τ_m = R_m * C_m.</span></li><li><span>Neurons with longer membrane time constants respond more slowly to changes in input, while those with shorter time constants respond more rapidly.</span></li></ul></li><li><p><span>Synaptic Time Constant:</span></p><ul><li><span>The synaptic time constant (often denoted as τ_syn) represents the time it takes for the synaptic current in a neuron to decay to approximately 37% of its peak amplitude after the arrival of a synaptic input.</span></li><li><span>It is influenced by the properties of the synapse, such as the neurotransmitter dynamics and receptor kinetics.</span></li><li><span>Synaptic time constants can vary widely depending on the type of synapse. For example, excitatory synapses mediated by glutamate typically have shorter synaptic time constants than inhibitory synapses mediated by GABA.</span></li></ul></li></ol><p><span>Difference:</span>
+<span>The key difference between these two time constants lies in what they measure:</span></p><ul><li><span>Membrane Time Constant (τ_m) primarily describes the intrinsic properties of a neuron&#39;s membrane and how quickly its membrane potential responds to changes in input currents.</span></li><li><span>Synaptic Time Constant (τ_syn) describes the time course of synaptic currents, focusing on how quickly postsynaptic responses to neurotransmitter release decay.</span></li></ul><p><span>In summary, while both time constants are important in understanding the dynamics of neuronal behavior, they pertain to different aspects of neuronal function: the membrane time constant is related to the neuron&#39;s electrical properties, while the synaptic time constant is related to the dynamics of neurotransmission at synapses.</span></p><h2><a name="neuron-modeling" class="md-header-anchor"></a><span>Neuron Modeling</span></h2><h3><a name="pyramidal-neuron-as-two-layer-neural-network" class="md-header-anchor"></a><span>Pyramidal Neuron as Two-Layer Neural Network </span></h3><p><span>We found the cells firing rate could be predicted by a simple formula that maps the physical components of the cell onto those of an abstract two-layer &quot;neural network. In the first layer synaptic inputs drive independent sigmoidal subunits corresponding to the cell&#39;s several dozen long, thin terminal dendrites. The subunit outputs are then summed within the main trunk and cell body prior to final thresholding. We conclude that insofar as the neural code is mediated by average firing rate, a two-layer neural network may provide a useful abstraction for the computing function of the individual pyramidal neuron.</span></p><p>&nbsp;</p><h2><a name="dendritic-integration-papers" class="md-header-anchor"></a><span>Dendritic integration papers</span></h2><p><strong><span>Dendritic integration</span></strong><span>: </span></p><p><span>Dendritic integration refers to the process by which a neuron integrates synaptic inputs received on its dendrites to generate an output signal. Neurons receive numerous synaptic inputs from other neurons onto their dendrites, and these inputs can be excitatory or inhibitory in nature. The integration of these inputs at the dendrites determines whether the neuron will generate an action potential or not.</span></p><p><span>Dendritic integration involves various mechanisms that determine how synaptic inputs are combined and transformed within the dendritic tree. These mechanisms include spatial and temporal summation, as well as the properties of dendritic voltage-gated channels and active conductances.</span></p><p><strong><span>Spatial summation</span></strong><span> refers to the additive effect of simultaneous synaptic inputs occurring at different locations on the dendritic tree. If the combined excitatory inputs reach a certain threshold, they can depolarize the dendrites sufficiently to generate an action potential.</span></p><p><strong><span>Temporal summation</span></strong><span>, on the other hand, involves the integration of synaptic inputs occurring at different times. If excitatory inputs arrive in rapid succession, their individual effects can summate temporally to reach the threshold for action potential initiation.</span></p><p><span>The properties of dendritic voltage-gated channels and active conductances further shape the integration process. Dendrites possess various types of ion channels that can amplify or attenuate synaptic inputs, such as voltage-gated sodium and potassium channels. These channels can influence the spread of depolarization along the dendritic tree and the generation of local dendritic spikes, contributing to the integration of synaptic inputs.</span></p><p><span>Overall, dendritic integration plays a crucial role in determining the output of a neuron and is essential for information processing in neural circuits. By integrating and processing synaptic inputs, dendrites contribute to the computational capabilities of neurons and shape their firing patterns and responses to incoming stimuli.</span></p><h3><a name="dendritic-integration-60-years-of-progress" class="md-header-anchor"></a><span>Dendritic integration: 60 years of progress</span></h3><h2><a name="junior-journal-club" class="md-header-anchor"></a><span>Junior Journal Club</span></h2><h3><a name="gain-control-by-layer-six-in-cortical-circuits-of-vision" class="md-header-anchor"></a><span>Gain control by layer six in cortical circuits of vision  </span></h3><p><span>Here we show that layer six in the primary visual cortex of the mouse has a crucial role in controlling the gain of visually evoked activity in neurons of the upper layers without changing their tuning to orientation. This gain modulation results from the coordinated action of layer six intracortical projections to superficial layers and </span><strong><span>deep projections to the thalamus</span></strong><span>, with a substantial role of the intracortical circuit. This study establishes layer six as a major mediator of cortical gain modulation and suggests that it could be a node through which convergent inputs from several brain areas can regulate the earliest steps of cortical visual processing.</span></p><p><span>L6 may thus influence cortical sensory responses directly through intracortical projections and indirectly through corticothalamic projections. </span><strong><span>Corticothalamic projections were reported to be both suppressive and facilitatory on thalamic activity</span></strong><span>, depending on the precise alignment between L6 and thalamic neurons.</span></p><p><span>Thus, these data show that stimulation of L6 excitatory neurons suppresses visually evoked responses in L2/3, L4 and L5 of V1. </span></p><p><span>L6 activity does not affect tuning. Remarkably, photostimulation of L6 resulted in the precise scaling of the tuning curve; that is, it reduced visually evoked responses by a similar fraction irrespective of presented orientation.</span></p><h3><a name="guarding-the-gateway-to-cortex-with-attention-in-visual-thalamus" class="md-header-anchor"></a><span>Guarding the gateway to cortex with attention in visual thalamus</span></h3><p><span>The massive visual input from the eye to the brain requires selective processing of some visual information at the expense of other information, a process referred to as visual attention. </span></p><p><span>Attention modulates visual signals before they even reach cortex by increasing responses of both magnocellular and parvocellular neurons in the first relay between retina and cortex, the lateral geniculate nucleus (LGN). At the same time, attention decreases neuronal responses in the adjacent thalamic reticular nucleus (TRN).</span></p><p><span>The visual sector of TRN receives excitatory inputs from LGN, but projects modulatory inhibitory input back to LGN. Therefore, TRN responses should instead decrease with attention, reducing the inhibitory influence of the TRN on LGN, thereby causing the increase in the responses of LGN neurons that we observe.</span></p><p><span>LGN responses increase with attention whereas TRN responses decrease.  </span></p><p>&nbsp;</p></div>
+</body>
+</html>
