@@ -1,6 +1,16 @@
 [Go to My Github Repo.](https://github.com/HollisChen/NoteSharing) | [Go to my Github Page.](https://hollischen.github.io/NoteSharing/)
 
-The following are Neuroscience Notes:
+The following are Neuroscience Paper Reading Notes:
+
+[Paper Reading Notes - Liang Lab](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Paper%20Reading%20Notes%20-%20Liang%20Lab)
+
+[G.R.Yang PhD Thesis Reading Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/G.R.Yang%20PhD%20Thesis%20Reading%20Notes)
+
+[Complex Networks for Asynchronous Representation Paper Reading Notes](https://hollischen.github.io/NoteSharing/ZhengHao%20Project/CNAP%20Paper%20Reading%20Notes)
+
+[Hidden Neurons Modeling-Related Paper Reading](https://hollischen.github.io/NoteSharing/Shuqi%20Project/HNM%20Paper%20Reading%20Notes)
+
+The following are Neuroscience Basic Notes:
 
 [Models of the Neuron Learning Notes](https://hollischen.github.io/NoteSharing/Models%20of%20the%20Neuron%20Class%20Notes/Models%20of%20the%20Neuron%20Learning%20Notes)
 
@@ -31,14 +41,6 @@ The following are Mathematics Notes:
 [Poisson Distribution](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Poisson%20Distribution.pdf)
 
 [First-Order System of Differential Equations](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/First-Order%20System%20of%20Differential%20Equations.pdf)
-
-The following are Paper Reading Notes:
-
-[G.R.Yang PhD Thesis Reading Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/G.R.Yang%20PhD%20Thesis%20Reading%20Notes)
-
-[Complex Networks for Asynchronous Representation Paper Reading Notes](https://hollischen.github.io/NoteSharing/ZhengHao%20Project/CNAP%20Paper%20Reading%20Notes)
-
-[Hidden Neurons Modeling-Related Paper Reading](https://hollischen.github.io/NoteSharing/Shuqi%20Project/HNM%20Paper%20Reading%20Notes)
 
 The following are Papers:
 
