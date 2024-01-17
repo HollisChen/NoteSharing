@@ -30,6 +30,10 @@ The following are AI Notes:
 
 [Key Notes of DS4PH Class](https://hollischen.github.io/NoteSharing/DS4PH%20Class%20Notes/Key%20Notes%20of%20DS4PH%20Class)
 
+[VAE Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/VAE%20Notes.pdf)
+
+[RNN-GRU-LSTM Notes](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/RNN-GRU-LSTM%20Notes.pdf)
+
 The following are Mathematics Notes:
 
 [Bayesian Statistics](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Bayesian%20Statistics)
