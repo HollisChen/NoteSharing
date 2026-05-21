@@ -36,7 +36,7 @@ The following are AI Notes:
 
 The following are Mathematics Notes:
 
-[Statistics Notes](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Statistics%20Notes)
+[Statistics Notes](https://hollischen.github.io/NoteSharing/Math%20&%20Physics/Statistics%20Notes.html)
 
 [Bayesian Statistics](https://hollischen.github.io/NoteSharing/Neuroscience%20and%20AI/Bayesian%20Statistics)
 
